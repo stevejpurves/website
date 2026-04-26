@@ -1,0 +1,161 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
+
+const portrait = 'https://lh3.googleusercontent.com/aida-public/AB6AXuAd_3Xq3lvs6SoFN93eyd_Y4LOBDPnxzJMdnP9AafIjtnyF1A3h49s7TvDyb8_l1NuTAjFJCPF9xj_sNAr6Ypy1o3TZnx_uHcDA4o6EiELrDGlbfqk8U8PX46E2uiyU04vzq_25PVE-spw8cE5pmybeKI5_vmQfdTXCylXUSqrXcdyEKM6SuJ6stXv_Xd0wGum0YDpgh8IzK3f45x16YwPPnKbeebSw1sm3z8D1_wsNG8yCb50itKpG3_cl6O1FmDGWgmoFNWimqTTj';
+---
+
+<Layout title="About — Euclidity SL" active="about">
+  <!-- Hero -->
+  <section class="px-16 py-xl max-w-[1440px] mx-auto">
+    <div class="grid grid-cols-12 gap-gutter items-end mb-24">
+      <div class="col-span-12 md:col-span-8">
+        <span class="font-label-caps text-label-caps text-primary uppercase mb-4 block">Institutional Identity</span>
+        <h1 class="font-h1 text-h1 text-on-background mb-8 uppercase">EUCLIDITY SL.</h1>
+        <p class="font-body-lg text-body-lg text-secondary max-w-2xl">
+          A specialized engineering collective dedicated to the synthesis of rigorous scientific inquiry and scalable systems architecture. We exist at the intersection of mathematical precision and industrial utility.
+        </p>
+      </div>
+      <div class="col-span-12 md:col-span-4 text-right">
+        <span class="font-mono-data text-mono-data text-outline">REG_ID: B76611763</span>
+      </div>
+    </div>
+
+    <!-- Mission grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-0 brutalist-border">
+      <div class="p-lg border-b md:border-b-0 md:border-r border-on-background">
+        <Icon name="terminal" size={36} class="text-primary mb-4" />
+        <h3 class="font-h3 text-h3 mb-4 uppercase">Hard Problems</h3>
+        <p class="font-body-md text-body-md text-secondary">We specialize in computationally expensive challenges that standard architectures cannot resolve. Our focus is on algorithmic efficiency and structural integrity.</p>
+      </div>
+      <div class="p-lg border-b md:border-b-0 md:border-r border-on-background">
+        <Icon name="science" size={36} class="text-primary mb-4" />
+        <h3 class="font-h3 text-h3 mb-4 uppercase">Scientific Domains</h3>
+        <p class="font-body-md text-body-md text-secondary">Bridging the gap between pure research and commercial application. We translate complex scientific models into high-performance software environments.</p>
+      </div>
+      <div class="p-lg">
+        <Icon name="hub" size={36} class="text-primary mb-4" />
+        <h3 class="font-h3 text-h3 mb-4 uppercase">System Bridging</h3>
+        <p class="font-body-md text-body-md text-secondary">Designing the connective tissue for disparate technology stacks. We ensure seamless data flow across heterogenous industrial infrastructures.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership -->
+  <section class="bg-surface-container-low border-t border-b border-on-background py-xl">
+    <div class="px-16 max-w-[1440px] mx-auto">
+      <div class="grid grid-cols-12 gap-gutter items-center">
+        <div class="col-span-12 md:col-span-5 mb-12 md:mb-0">
+          <div class="brutalist-border p-2 bg-surface-container-lowest">
+            <img
+              alt="Steve Purves portrait"
+              class="w-full grayscale contrast-125 brightness-90"
+              src={portrait}
+            />
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-7 md:pl-12">
+          <span class="font-label-caps text-label-caps text-primary uppercase mb-2 block">Technical Direction</span>
+          <h2 class="font-h2 text-h2 mb-6 uppercase">STEVE PURVES</h2>
+          <div class="w-16 h-1 bg-primary mb-8"></div>
+          <p class="font-body-lg text-body-lg mb-8 leading-relaxed">
+            "Engineering is not merely the act of building; it is the discipline of eliminating ambiguity. At Euclidity, our methodology is rooted in the uncompromising pursuit of technical clarity."
+          </p>
+          <div class="grid grid-cols-2 gap-8">
+            <div>
+              <span class="font-mono-data text-mono-data block text-outline mb-1">POSITION</span>
+              <span class="font-label-caps text-label-caps">CHIEF SYSTEMS ARCHITECT</span>
+            </div>
+            <div>
+              <span class="font-mono-data text-mono-data block text-outline mb-1">EXPERTISE</span>
+              <span class="font-label-caps text-label-caps">COMPUTATIONAL PHYSICS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="px-16 py-xl max-w-[1440px] mx-auto scroll-mt-24">
+    <div class="grid grid-cols-12 gap-gutter">
+      <div class="col-span-12 md:col-span-4">
+        <h2 class="font-h2 text-h2 mb-8 uppercase">Initiate Consultation</h2>
+        <p class="font-body-md text-body-md text-secondary mb-12">
+          For project inquiries involving high-complexity systems or scientific data processing, please submit a formal request.
+        </p>
+        <div class="space-y-4">
+          <div class="flex items-center gap-4">
+            <Icon name="mail" class="text-primary" />
+            <a href="mailto:ops@euclidity.com" class="font-mono-data text-mono-data hover:text-primary transition-colors">ops@euclidity.com</a>
+          </div>
+          <div class="flex items-center gap-4">
+            <Icon name="location_on" class="text-primary" />
+            <span class="font-mono-data text-mono-data">Madrid, Technological Zone</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-span-12 md:col-span-8">
+        <form
+          class="space-y-8 brutalist-border p-lg bg-surface-container-lowest"
+          action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID"
+          method="POST"
+        >
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="flex flex-col gap-2">
+              <label for="name" class="font-label-caps text-label-caps uppercase">Full Name</label>
+              <input
+                id="name"
+                name="name"
+                required
+                class="brutalist-border px-4 py-3 bg-surface-container-lowest focus:outline-none focus:border-primary focus:border-2 transition-all"
+                placeholder="SURNAME, INITIALS"
+                type="text"
+              />
+            </div>
+            <div class="flex flex-col gap-2">
+              <label for="organization" class="font-label-caps text-label-caps uppercase">Organization</label>
+              <input
+                id="organization"
+                name="organization"
+                class="brutalist-border px-4 py-3 bg-surface-container-lowest focus:outline-none focus:border-primary focus:border-2 transition-all"
+                placeholder="ENTITY NAME"
+                type="text"
+              />
+            </div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="email" class="font-label-caps text-label-caps uppercase">Email</label>
+            <input
+              id="email"
+              name="email"
+              required
+              class="brutalist-border px-4 py-3 bg-surface-container-lowest focus:outline-none focus:border-primary focus:border-2 transition-all"
+              placeholder="NAME@DOMAIN.COM"
+              type="email"
+            />
+          </div>
+          <div class="flex flex-col gap-2">
+            <label for="message" class="font-label-caps text-label-caps uppercase">Technical Requirements</label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              class="brutalist-border px-4 py-3 bg-surface-container-lowest focus:outline-none focus:border-primary focus:border-2 transition-all"
+              placeholder="DESCRIBE THE CORE TECHNICAL CHALLENGE..."
+              rows="4"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-primary text-on-primary font-bold text-lg py-4 brutalist-border hover:bg-on-background transition-all flex items-center justify-center gap-4"
+          >
+            SUBMIT_CONSULTATION_REQUEST
+            <Icon name="arrow_forward" />
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</Layout>

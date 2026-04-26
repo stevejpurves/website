@@ -1,0 +1,163 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+interface Project {
+  name: string;
+  segment: string;
+  region: string;
+  blurb: string;
+  image: string;
+  imageAlt: string;
+}
+
+const projects: Project[] = [
+  {
+    name: 'CURVENOTE',
+    segment: 'OPEN SCIENCE',
+    region: 'CANADA',
+    blurb: 'Scientific writing and publishing platform for modern research teams.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCrEbucQ6wfF-FUxyHxEcPrEzNzuyeLVk-XkLssZ2FMuKSZb6kzuwEVA804l7NgXvnMsZYgRrw6JCAagTmhvZW1mgdFWKoLPK_-XLfM6PlFQmZi6GHHySgsg7R0E9E9mKceBT1DAbed3KoGJOCUscGhHE0bhL0TzQr_rNjiwxF44oiGqwcv9IBjf0g_NZ4rZs8kRju2-cUzvRb3PQuIanIzD0Yf6J7wHzd1JP8MKUgBN287hZVbJNLi9YHPMSz0E-t4GPTMJQgGvXZB',
+    imageAlt: 'Modern technical dashboard with scientific plots and clean data visualization',
+  },
+  {
+    name: 'EARTH SCIENCE ANALYTICS',
+    segment: 'GEOSCIENCE',
+    region: 'NORWAY',
+    blurb: 'AI-driven geoscience software for subsurface exploration and drilling.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBv2gLAm941K9WfYh9-2chuMyL-4CVwSYP5OIuXGqXJ6wrcndBjjrASb7SsvVflV0WhLQLlVKXHGHik6ZT-482SQ31jJKYv19Giu0xm0ePyProjEHeATGv0JWxBsAD_SD6d3ZzIfoX7ehLafiHzzE2xqVIg8Vl-xe-t7pKD1SEjYZHU0ahZhCl7HlS5i4e1JZc9wzwb4B88KgUGfzWEMmv7lXVs9l-gKuYal5e5E5P05agLsEqVtXD18d9iM_XIdmYc0ObY6YQfkRIb',
+    imageAlt: 'Topographic geological map with 3D terrain modeling and seismic data',
+  },
+  {
+    name: 'EXPERO',
+    segment: 'TECH_CONSULTING',
+    region: 'USA',
+    blurb: 'Advanced visual analytics and complex domain software architecture.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC8nm_wm9iNQ3nR4XQJQE94MajFdNi1OOsTmhQZjNsAzOTL3oqG_U8HCNtfitUfDw6PGxhkG_Fflt0YCkccM_m1uXObvDmgzjcKaNsPOUoPqQSDEPu3GBcJ0Ehia7P6gbP8mQSDuekP985XWNSuwPJfh_XsT-EcPJSob94okmC5mvRl6_t0r5hIdq6gbyg22ktdBAi2Tl1XyRRirVvKSiUqdfWegla-dNLaDsQOH_QJwpqlVu_zNGNCvwQe1EigTUHluq8w8PMEE3Ob',
+    imageAlt: 'Complex network graph visualization with nodes and connections',
+  },
+  {
+    name: 'RENESAS',
+    segment: 'SEMICONDUCTORS',
+    region: 'USA',
+    blurb: 'Next-gen embedded solutions and technical tooling for global manufacturing.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAzORdMWUVrboLvVkEvEZ5-1z31b4hxZ0HxgWRtAyPRKMS7_WwrS_Yl8b-x6xlIrmJVGuUnbrYPgbUtTZTDtOIbRp8T3ELIH6Nk26lNlj7UBSOEd-l1E1_ckF_Th7idfAC0ZnO17-gGWbAg5VRvMUg7C01sTKqjgahAoZAh3x_XP_uGBFkDBURUh3V386wRlkKGo9VVoMi1zxDIZ9i0qRgDrhd55Lo52-rSoYRamqZobeDRzI9XCNw04Yn7whE4rN1bryu8zZ24qFb2',
+    imageAlt: 'Close up of a semiconductor circuit board with precise lighting elements',
+  },
+  {
+    name: 'DENTISPHERE',
+    segment: 'MED-TECH',
+    region: 'BELGIUM',
+    blurb: 'Clinical performance visualization for orthodontic practitioners.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuB_STWW62_iGdRu-Uo7scjaMjk1y7UvPGSSKmOXISZjl3vp3kBBXt18UIgYCow0780GKIMevG7iZHlt3I7PHNZQ-hJ0CJ7701HkqCk07dlSHFFidhdsUl6qGQd2xXPYQSftEELTlNJcFNvjOd-bivbPkf5CZDHm34atve_v1e9o1R2S2cK4m6esLcBXiKv95Sy51uxBUTv8QHVk6-bD8qx-H_GoX8Z92cb-entNMIdDDUoHRetUZTXC1ayuNTfHaQQ9gOUiSF7YU3us',
+    imageAlt: 'Medical imaging software interface showing 3D dental scans',
+  },
+  {
+    name: 'UNNAMED FINANCE',
+    segment: 'FINANCE',
+    region: 'USA',
+    blurb: 'High-frequency trading interface and risk management dashboards.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuALqzV7mv4dhBrC9_LBbnjm7DucRRByjirzNwvNkxP-8465z0fkwIgYGYetuNGH3YaTlGU7JMd8fFaV86klXzemrIW_-CyMJrrJ4EgMsA81FPxUI0Rep4HMux-iQT3HH5dqasj6ztpebIlt1327EIGjs_neDNp0x3SqjE9r8RVh2HiMfnYVQgmIMLm2PH-lCYik2TLz09yXtCXmJC-xfaAWGRHz335rEuWNQ3mW3M4B3gJo9uLeE0WgBloqCWKfISi0Ib-8baIXQneU',
+    imageAlt: 'Real-time financial trading charts with technical analysis overlays',
+  },
+  {
+    name: 'AIRPAIR',
+    segment: 'DEV_TOOLS',
+    region: 'USA',
+    blurb: 'Expert developer matchmaking and technical pair-programming infrastructure.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDqRo1jSwxjQ3kfsYp-JfMTj3ANk8OpO9203D69XwAxoZTq7uWJQ2jgMA4NyXExjQgo9iUA1uO5b4iaqsz2X-JRZnJTHWI5Q57wyISf0OC91t1l3lcWnsEFa1APGyV_zDiFOlJyByrqi258l64W4ODp5wYhD7BVhIDhgUyD9GGILzQwSSwBFo8VhUVsH_A2kJcmbJbF5I79_Btj-Y-G5sTuD7Yrfs3VMPK7EpFNxe6eeTC94blahX0WZtxHWxSLzOj7BbP4P12ZvbBk',
+    imageAlt: 'Software code on a monitor with syntax highlighting',
+  },
+  {
+    name: 'GEOTERIC',
+    segment: 'GEOSCIENCE',
+    region: 'UK',
+    blurb: 'Seismic interpretation software for world-class subsurface understanding.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDuBIoDO1GF57nlJl8UbSuq-8jj0liJX3VH8OgrRSwpHbyckEU8X4mGTOWBr3Yw5uYNrGCDlBYBWB1woRUrgGOmUwgXW6-RbriiCL_Ws1eaq6VKHWo2sZzRnTrIomzZmSlmoHaSJomf8zUv45N_iJ1YEZPZpT6y2mHR5fOaFSL8EFQl1ebvxbd_97yBZyqpgkmjh8xPKHIr1JCg6FubTFsqj8TpRr3kA8lLecZbcuLL5uhdTAC7PkHMMFTTyv0vMjDvsu0-JW3N49Fs',
+    imageAlt: 'Geospatial satellite imagery with thermal heat map overlays',
+  },
+  {
+    name: 'SHARP REFLECTIONS',
+    segment: 'GEOSCIENCE',
+    region: 'GERMANY',
+    blurb: 'Big data seismic processing and amplitude analysis for global exploration.',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCvYUep6aWThceSOFkJi5LSV-IJhwaP7rfjcGLWjf7_7eCw3I9-8fnR6W45LvhTf_h6Q6BIn-YaN4cFTrR_cK35gXDiIaLjUWzV-uAJIOHoxFt5MAGEqBxDIICDBpU5wJ9aFRgGIVeplDv-SHSBWmRjilNVMvtb-VTxYRkUi2BNP1v2VcS7j-Ok7p9R7-j4dV6CewqFr-CDMpTmswysr3kAKfoPs49ypT0GeSvwKx9ZLcbmFNg2i5o4ZgNWDHDWR26dDX8So2M-Dtqi',
+    imageAlt: 'Large data sets visualized as 3D point clouds and abstract geometric patterns',
+  },
+];
+---
+
+<Layout title="Projects — Euclidity SL" active="projects">
+  <!-- Hero -->
+  <section class="px-16 py-xl max-w-[1440px] mx-auto border-b border-on-background">
+    <div class="grid grid-cols-12 gap-gutter items-end">
+      <div class="col-span-12 lg:col-span-8">
+        <span class="font-label-caps text-label-caps text-primary uppercase mb-4 block">Deployment Log</span>
+        <h1 class="font-h1 text-h1 text-on-background mb-8 uppercase">GLOBAL PORTFOLIO. CLINICAL EXECUTION.</h1>
+      </div>
+      <div class="col-span-12 lg:col-span-4 pb-8">
+        <p class="font-body-lg text-body-lg text-secondary border-l-4 border-primary pl-6">
+          Deploying mission-critical engineering solutions across 4+ continents. Specializing in high-stakes data visualization, technical infrastructure, and algorithmic precision.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Segments stats -->
+  <section class="bg-surface-container-lowest border-b border-on-background">
+    <div class="max-w-[1440px] mx-auto grid grid-cols-2 md:grid-cols-4 divide-x divide-on-background">
+      <div class="p-12 flex flex-col gap-2">
+        <span class="font-label-caps text-label-caps text-secondary">SEGMENT_01</span>
+        <span class="font-h3 text-h3 text-on-background">GEOSCIENCE</span>
+      </div>
+      <div class="p-12 flex flex-col gap-2">
+        <span class="font-label-caps text-label-caps text-secondary">SEGMENT_02</span>
+        <span class="font-h3 text-h3 text-on-background">MED-TECH</span>
+      </div>
+      <div class="p-12 flex flex-col gap-2">
+        <span class="font-label-caps text-label-caps text-secondary">SEGMENT_03</span>
+        <span class="font-h3 text-h3 text-on-background">FINANCE</span>
+      </div>
+      <div class="p-12 flex flex-col gap-2">
+        <span class="font-label-caps text-label-caps text-secondary">SEGMENT_04</span>
+        <span class="font-h3 text-h3 text-on-background">OPEN SCIENCE</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project bento grid -->
+  <section class="px-16 py-xl max-w-[1440px] mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+      {projects.map((p) => (
+        <article class="group bg-surface-container-lowest brutalist-border flex flex-col transition-all hover:bg-surface-container">
+          <div class="aspect-video overflow-hidden border-b border-on-background relative">
+            <img
+              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+              src={p.image}
+              alt={p.imageAlt}
+              loading="lazy"
+            />
+            <div class="absolute top-4 right-4 bg-primary-container text-on-primary-container px-3 py-1 font-label-caps text-label-caps uppercase">
+              {p.region}
+            </div>
+          </div>
+          <div class="p-8 flex-grow">
+            <span class="font-label-caps text-label-caps text-primary mb-2 block">{p.segment}</span>
+            <h3 class="font-h3 text-h3 mb-4 uppercase">{p.name}</h3>
+            <p class="font-body-md text-body-md text-secondary">{p.blurb}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-on-background text-surface-container-lowest px-16 py-xl">
+    <div class="max-w-[1440px] mx-auto text-center">
+      <h2 class="font-h1 text-h1 mb-12 tracking-tighter uppercase">READY_FOR_DEPLOYMENT?</h2>
+      <div class="flex flex-col md:flex-row justify-center gap-8">
+        <a href="/about#contact" class="bg-primary-container text-on-primary-container px-12 py-6 font-h3 text-h3 hover:bg-surface-container-lowest hover:text-on-background transition-all brutalist-border uppercase">INITIATE_PROJECT</a>
+        <a href="/services" class="bg-transparent text-surface-container-lowest border border-surface-container-lowest px-12 py-6 font-h3 text-h3 hover:bg-surface-container-lowest hover:text-on-background transition-all uppercase">VIEW_CAPABILITIES</a>
+      </div>
+    </div>
+  </section>
+</Layout>

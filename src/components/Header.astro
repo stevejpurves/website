@@ -1,0 +1,47 @@
+---
+import Logo from './Logo.astro';
+
+interface Props {
+  active?: 'services' | 'projects' | 'about' | null;
+}
+
+const { active = null } = Astro.props;
+
+const links: { href: string; label: string; key: NonNullable<Props['active']> }[] = [
+  { href: '/services', label: 'SERVICES', key: 'services' },
+  { href: '/projects', label: 'PROJECTS', key: 'projects' },
+  { href: '/about', label: 'ABOUT', key: 'about' },
+];
+---
+
+<header class="bg-surface-container-lowest border-b border-on-background fixed top-0 left-0 right-0 z-50">
+  <nav class="flex justify-between items-center w-full px-16 h-20 max-w-[1440px] mx-auto">
+    <a href="/" class="flex items-center gap-3 text-on-background">
+      <Logo size={36} class="block" />
+      <span class="text-2xl font-bold tracking-tighter font-h1 uppercase">Euclidity&nbsp;SL</span>
+    </a>
+
+    <div class="hidden md:flex gap-12 items-center">
+      {links.map((link) => (
+        <a
+          href={link.href}
+          class:list={[
+            'font-h1 font-bold uppercase tracking-tight text-body-md transition-colors duration-75',
+            active === link.key
+              ? 'text-primary border-b-2 border-primary pb-1'
+              : 'text-on-background hover:text-primary',
+          ]}
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+
+    <a
+      href="/about#contact"
+      class="bg-primary text-on-primary px-6 py-3 font-label-caps text-label-caps uppercase tracking-widest border border-on-background hover:bg-on-background transition-colors"
+    >
+      GET_IN_TOUCH
+    </a>
+  </nav>
+</header>

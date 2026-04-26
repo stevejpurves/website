@@ -1,0 +1,19 @@
+---
+interface Props {
+  size?: number;
+  class?: string;
+  alt?: string;
+}
+
+const { size = 36, class: className = '', alt = 'Euclidity SL logomark' } = Astro.props;
+---
+
+<img
+  src="/logo-mark.png"
+  alt={alt}
+  width={size}
+  height={size}
+  class={className}
+  loading="eager"
+  decoding="async"
+/>

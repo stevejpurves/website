@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#0041ff",
+                    "surface-container-low": "#f3f3f3",
+                    "surface-dim": "#dadada",
+                    "surface": "#f9f9f9",
+                    "on-primary-fixed-variant": "#0031c6",
+                    "background": "#f9f9f9",
+                    "primary": "#0030c4",
+                    "secondary": "#5f5e5e",
+                    "on-background": "#1a1c1c",
+                    "on-primary-fixed": "#00115a",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "tertiary-fixed": "#ffdad3",
+                    "on-primary-container": "#cfd4ff",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed-variant": "#8c1800",
+                    "surface-bright": "#f9f9f9",
+                    "primary-fixed-dim": "#bac3ff",
+                    "on-surface-variant": "#434657",
+                    "on-secondary-fixed-variant": "#474646",
+                    "tertiary-container": "#b52200",
+                    "surface-container": "#eeeeee",
+                    "tertiary-fixed-dim": "#ffb4a4",
+                    "tertiary": "#8a1800",
+                    "outline": "#747689",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-tertiary-container": "#ffcbbf",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#3d0600",
+                    "surface-tint": "#0743ff",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-secondary-container": "#656464",
+                    "secondary-fixed": "#e5e2e1",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#e8e8e8",
+                    "inverse-primary": "#bac3ff",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e2e2e2",
+                    "outline-variant": "#c4c5da",
+                    "on-surface": "#1a1c1c",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#2f3131",
+                    "secondary-container": "#e5e2e1",
+                    "inverse-on-surface": "#f1f1f1",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#dee0ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "8px",
+                    "gutter": "24px",
+                    "container-max": "1440px",
+                    "md": "16px",
+                    "unit": "4px",
+                    "xs": "4px",
+                    "lg": "32px",
+                    "xl": "64px"
+            },
+            "fontFamily": {
+                    "body-md": ["Space Grotesk"],
+                    "h2": ["Space Grotesk"],
+                    "h3": ["Space Grotesk"],
+                    "label-caps": ["Space Grotesk"],
+                    "h1": ["Space Grotesk"],
+                    "body-lg": ["Space Grotesk"],
+                    "mono-data": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                    "h2": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "h3": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "h1": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                    "mono-data": ["14px", {"lineHeight": "1.4", "letterSpacing": "0em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .brutalist-border {
+            border: 1px solid #1a1c1c;
+        }
+        .brutalist-border-b {
+            border-bottom: 1px solid #1a1c1c;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased">
+<!-- TopNavBar -->
+<header class="bg-white border-b border-black sticky top-0 z-50">
+<nav class="flex justify-between items-center w-full px-16 h-20 max-w-[1440px] mx-auto">
+<div class="text-2xl font-black tracking-tighter text-black uppercase">
+                ENGINEERING.CO
+            </div>
+<div class="hidden md:flex gap-12 items-center">
+<a class="font-['Space_Grotesk'] font-bold uppercase tracking-tight text-blue-600 border-b-2 border-blue-600 pb-1 cursor-pointer active:invert" href="#">SERVICES</a>
+<a class="font-['Space_Grotesk'] font-bold uppercase tracking-tight text-black font-medium hover:bg-blue-600 hover:text-white transition-all duration-75 cursor-pointer active:invert" href="#">PROJECTS</a>
+<a class="font-['Space_Grotesk'] font-bold uppercase tracking-tight text-black font-medium hover:bg-blue-600 hover:text-white transition-all duration-75 cursor-pointer active:invert" href="#">ABOUT</a>
+</div>
+<button class="bg-primary text-white px-6 py-3 font-label-caps uppercase hover:bg-black transition-colors brutalist-border">
+                GET_IN_TOUCH
+            </button>
+</nav>
+</header>
+<main class="max-w-[1440px] mx-auto px-16 py-xl">
+<!-- Hero Section -->
+<section class="mb-xl">
+<div class="flex flex-col gap-sm max-w-4xl">
+<span class="font-label-caps text-primary uppercase tracking-[0.2em] mb-xs">CORE CAPABILITIES</span>
+<h1 class="font-h1 text-h1 text-black mb-md uppercase leading-none">HIGH-PRECISION<br/>ENGINEERING.</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl">
+                    Euclidity SL delivers clinical execution for high-stakes technical environments. We bridge the gap between abstract scientific research and production-grade reliability.
+                </p>
+</div>
+</section>
+<!-- Services Grid: Bento Style -->
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Full-Stack Engineering -->
+<div class="col-span-12 md:col-span-8 brutalist-border bg-white p-lg flex flex-col justify-between min-h-[400px]">
+<div>
+<div class="flex justify-between items-start mb-lg">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="terminal">terminal</span>
+<div class="flex gap-2">
+<span class="px-2 py-1 bg-surface-container-high font-label-caps text-[10px]">TS</span>
+<span class="px-2 py-1 bg-surface-container-high font-label-caps text-[10px]">RUST</span>
+<span class="px-2 py-1 bg-surface-container-high font-label-caps text-[10px]">C++</span>
+</div>
+</div>
+<h2 class="font-h3 text-h3 mb-md uppercase">Full-Stack Engineering</h2>
+<p class="font-body-md text-secondary max-w-xl">
+                        Building deterministic, high-throughput systems. Our stack is chosen for safety, performance, and long-term maintainability. We specialize in TypeScript, Node.js, Rust, Python, and C++ for mission-critical applications.
+                    </p>
+</div>
+<div class="mt-lg pt-md brutalist-border-b border-surface-dim flex justify-between items-center">
+<span class="font-mono-data text-xs uppercase tracking-widest text-primary">STATUS: PRODUCTION_READY</span>
+<span class="material-symbols-outlined text-primary" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<!-- R&D Leadership -->
+<div class="col-span-12 md:col-span-4 brutalist-border bg-black text-white p-lg flex flex-col">
+<span class="material-symbols-outlined text-primary-fixed-dim text-4xl mb-lg" data-icon="science">science</span>
+<h2 class="font-h3 text-h3 mb-md uppercase text-white">R&amp;D Leadership</h2>
+<ul class="font-mono-data space-y-md text-surface-container-low mt-sm">
+<li class="flex items-center gap-sm">
+<span class="w-1.5 h-1.5 bg-primary"></span> Machine Learning Research
+                    </li>
+<li class="flex items-center gap-sm">
+<span class="w-1.5 h-1.5 bg-primary"></span> Algorithm Development
+                    </li>
+<li class="flex items-center gap-sm">
+<span class="w-1.5 h-1.5 bg-primary"></span> Computer Vision Systems
+                    </li>
+<li class="flex items-center gap-sm">
+<span class="w-1.5 h-1.5 bg-primary"></span> Signal Processing
+                    </li>
+</ul>
+<div class="mt-auto pt-xl">
+<img alt="Scientific visualization" class="w-full grayscale h-32 object-cover" data-alt="Abstract 3D network visualization of neural nodes and connections in deep blue and clinical white lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvePEaFMEu1Ub7nAjwtVvyLL6_F8mvfyyVwDXQKc3ucna_QaFS5cILUYd6z7WoRy6qo0L-cknKR9gP70jnZ8oKir5TglIxt_pBYxl7qAmR5nxoFJBL-C4iEP6IxgSTGkms9Sl_agUlB0E1JFw1Xxtn_iholrn7uhBpw4A0LsNm0BR7eOue05_QpiTm6L4k9I0qkNT65v3HiOGsVi_80YruX1hK9HwxMW748omEZUrAtgZir6hymBF5XDkpV0ghLDuvHoM_u9dIdBCi"/>
+</div>
+</div>
+<!-- Cloud Native Architectures -->
+<div class="col-span-12 md:col-span-5 brutalist-border bg-surface-container-lowest p-lg relative overflow-hidden">
+<div class="z-10 relative">
+<span class="material-symbols-outlined text-primary text-4xl mb-lg" data-icon="cloud_done">cloud_done</span>
+<h2 class="font-h3 text-h3 mb-md uppercase">Cloud Native Architectures</h2>
+<p class="font-body-md text-secondary mb-lg">
+                        Scalable infrastructure for intensive workloads. 
+                        AWS, Azure, GCP, JupyterHub deployments, and high-performance Docker containerization.
+                    </p>
+</div>
+<div class="flex gap-xs flex-wrap">
+<span class="border border-outline-variant px-3 py-1 font-label-caps">KUBERNETES</span>
+<span class="border border-outline-variant px-3 py-1 font-label-caps">TERRAFORM</span>
+<span class="border border-outline-variant px-3 py-1 font-label-caps">SERVERLESS</span>
+</div>
+</div>
+<!-- Fractional CTO -->
+<div class="col-span-12 md:col-span-7 brutalist-border bg-primary text-white p-lg flex items-center justify-between">
+<div class="max-w-md">
+<h2 class="font-h3 text-h3 mb-md uppercase text-white">Fractional CTO &amp; Team Augmentation</h2>
+<p class="font-body-md text-on-primary-container">
+                        Strategic technical leadership for scaling startups and enterprise divisions. We integrate with your team to instill engineering rigor and accelerate roadmap delivery.
+                    </p>
+</div>
+<div class="hidden lg:block text-8xl font-black opacity-20 select-none">CTO</div>
+</div>
+</div>
+<!-- Specialized Methodology Section -->
+<section class="mt-xl py-xl brutalist-border bg-white">
+<div class="px-lg flex flex-col md:flex-row gap-xl items-center">
+<div class="md:w-1/2">
+<div class="h-[400px] w-full bg-surface-container relative">
+<img alt="Methodology Visual" class="w-full h-full object-cover grayscale opacity-50" data-alt="Extreme close-up of high-precision mechanical gears and micro-components with cold clinical lighting and high contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD02xIB9PGPDfZoxwQfrBgBnNHph5P0hA4m8ppRr95BYI9wvxvoMv3q_uMOptQGZZWn0fUTWyqrDq3neLDE6zogHZAQHw2Ut94rMZiIjobp4eWxhz-Y2ZUFCRX6QIEfJ_eHaZrdrrh-coafRwsj_0L8ngkZpMmT1krB4eJvSjWiId1M-agfHqn0RLPUTuh4SU-bXsQmS5WPOZPdmhT7ldVKDC2-rATQH0WLOdk760mfiaFPE5yoSoKmXq_z0l-7MwJ0lS3UmqQpUOON"/>
+<div class="absolute inset-0 border-[24px] border-white mix-blend-normal"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-white p-6 brutalist-border">
+<span class="font-h2 leading-none">0.001%</span>
+<p class="font-label-caps mt-2">ERROR TOLERANCE</p>
+</div>
+</div>
+</div>
+<div class="md:w-1/2">
+<span class="font-label-caps text-primary uppercase mb-xs block">THE METHODOLOGY</span>
+<h2 class="font-h2 text-h2 mb-lg uppercase tracking-tighter">SOLVING HARD INTEGRATION PROBLEMS</h2>
+<div class="space-y-lg">
+<div class="flex gap-md">
+<span class="font-h3 text-primary opacity-30">01</span>
+<div>
+<h4 class="font-bold uppercase mb-xs">Scientific Domain Onboarding</h4>
+<p class="text-secondary font-body-md">We don't just write code; we learn your domain. Whether it's biotech, quantitative finance, or industrial IoT, our engineers speak your language.</p>
+</div>
+</div>
+<div class="flex gap-md">
+<span class="font-h3 text-primary opacity-30">02</span>
+<div>
+<h4 class="font-bold uppercase mb-xs">Rigorous Stress Testing</h4>
+<p class="text-secondary font-body-md">Our systems are battle-tested against edge cases, network latency, and data corruption scenarios before they ever reach a production environment.</p>
+</div>
+</div>
+<div class="flex gap-md">
+<span class="font-h3 text-primary opacity-30">03</span>
+<div>
+<h4 class="font-bold uppercase mb-xs">Deterministic Deployment</h4>
+<p class="text-secondary font-body-md">Using Infrastructure-as-Code and immutable build artifacts to ensure that what was tested is exactly what was shipped.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="mt-xl py-xl text-center">
+<h2 class="font-h1 text-h2 uppercase mb-lg">READY TO SCALE?</h2>
+<div class="flex justify-center gap-md">
+<button class="bg-black text-white px-12 py-5 font-label-caps text-lg brutalist-border hover:bg-primary transition-all">
+                    START_CONSULTATION
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white border-t border-black w-full px-16 py-12 flex flex-col md:flex-row justify-between items-end gap-8 max-w-[1440px] mx-auto">
+<div class="flex flex-col gap-4">
+<div class="text-lg font-bold text-black uppercase">ENGINEERING.CO</div>
+<div class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase text-zinc-500">
+                ©2024 ENGINEERING.CO ALL RIGHTS RESERVED. CLINICAL PERFORMANCE GUARANTEED.
+            </div>
+</div>
+<div class="flex gap-8">
+<a class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase text-zinc-500 hover:text-blue-600 transition-opacity duration-200 hover:opacity-80" href="#">PRIVACY</a>
+<a class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase text-zinc-500 hover:text-blue-600 transition-opacity duration-200 hover:opacity-80" href="#">TERMS</a>
+<a class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase text-zinc-500 hover:text-blue-600 transition-opacity duration-200 hover:opacity-80" href="#">CAREERS</a>
+<a class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase text-zinc-500 hover:text-blue-600 transition-opacity duration-200 hover:opacity-80" href="#">DOCUMENTATION</a>
+</div>
+</footer>
+</body></html>

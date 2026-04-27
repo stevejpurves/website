@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#e7bf99",
+                    "on-primary": "#ffffff",
+                    "on-secondary-container": "#646464",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#775839",
+                    "surface-bright": "#fbf8ff",
+                    "on-background": "#1a1b22",
+                    "surface": "#fbf8ff",
+                    "on-secondary-fixed": "#1b1b1b",
+                    "on-tertiary-fixed": "#2c1701",
+                    "surface-container-low": "#f4f2fd",
+                    "on-primary-fixed": "#002203",
+                    "error": "#ba1a1a",
+                    "on-surface": "#1a1b22",
+                    "tertiary-fixed": "#ffdcbd",
+                    "primary-fixed-dim": "#00e639",
+                    "surface-container-high": "#e8e7f1",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#474747",
+                    "on-tertiary-container": "#7a5b3c",
+                    "surface-variant": "#e3e1ec",
+                    "primary-fixed": "#72ff70",
+                    "inverse-on-surface": "#f1effa",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#5d4124",
+                    "surface-tint": "#006e16",
+                    "on-primary-fixed-variant": "#00530e",
+                    "secondary-fixed-dim": "#c6c6c6",
+                    "tertiary-container": "#ffd5ae",
+                    "inverse-primary": "#00e639",
+                    "on-error": "#ffffff",
+                    "outline": "#6b7c65",
+                    "primary-container": "#00ff41",
+                    "secondary-fixed": "#e2e2e2",
+                    "on-secondary": "#ffffff",
+                    "surface-container": "#eeedf7",
+                    "secondary": "#5e5e5e",
+                    "surface-dim": "#dad9e3",
+                    "on-tertiary": "#ffffff",
+                    "background": "#fbf8ff",
+                    "surface-container-highest": "#e3e1ec",
+                    "secondary-container": "#e2e2e2",
+                    "on-primary-container": "#007117",
+                    "primary": "#006e16",
+                    "outline-variant": "#b9ccb2",
+                    "on-surface-variant": "#3b4b37",
+                    "inverse-surface": "#2f3038"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin": "48px",
+                    "container-max": "1440px",
+                    "unit": "4px"
+            },
+            "fontFamily": {
+                    "body-md": ["Space Grotesk"],
+                    "mono-data": ["Space Grotesk"],
+                    "headline-md": ["Space Grotesk"],
+                    "headline-lg": ["Space Grotesk"],
+                    "headline-sm": ["Space Grotesk"],
+                    "body-lg": ["Space Grotesk"],
+                    "label-caps": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400"}],
+                    "mono-data": ["14px", {"lineHeight": "1.4", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                    "headline-md": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.3", "letterSpacing": "0", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .hard-shadow {
+            box-shadow: 4px 4px 0px 0px #000000;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .custom-grid-pattern {
+            background-image: linear-gradient(#f0f0f0 1px, transparent 1px), linear-gradient(90deg, #f0f0f0 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-white text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="bg-white dark:bg-zinc-950 docked full-width top-0 border-b border-black dark:border-zinc-800 flex justify-between items-center w-full px-8 h-16 fixed z-50">
+<div class="text-2xl font-black tracking-tighter text-black dark:text-white font-headline-md">
+            EUCLIDITY SL
+        </div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-['Space_Grotesk'] font-medium uppercase tracking-widest text-sm text-black dark:text-white border-b-2 border-lime-400 pb-1" href="#">SERVICES</a>
+<a class="font-['Space_Grotesk'] font-medium uppercase tracking-widest text-sm text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white" href="#">PROJECTS</a>
+<a class="font-['Space_Grotesk'] font-medium uppercase tracking-widest text-sm text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white" href="#">ABOUT</a>
+</div>
+<button class="bg-black text-white px-6 py-2 font-label-caps text-xs border border-black hover:bg-lime-400 hover:text-black transition-none uppercase tracking-widest">
+            GET IN TOUCH
+        </button>
+</nav>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="min-h-[819px] flex flex-col items-center justify-center border-b border-black custom-grid-pattern px-8 relative overflow-hidden">
+<div class="max-w-container-max w-full py-24 relative z-10">
+<div class="inline-block border border-black px-3 py-1 mb-6 bg-lime-400">
+<span class="font-label-caps text-black">SYSTEM STATUS: OPTIMAL [99.99%]</span>
+</div>
+<h1 class="font-headline-lg text-[clamp(3rem,10vw,7rem)] leading-[0.9] tracking-tighter uppercase mb-12">
+                    ENGINEERING<br/>
+<span class="text-primary-fixed-dim">SYSTEMIC</span><br/>
+                    CLARITY
+                </h1>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+<div class="md:col-span-6">
+<p class="font-body-lg text-xl max-w-xl leading-relaxed">
+                            EUCLIDITY SL develops precision-engineered digital infrastructure for high-stakes technical environments. We reduce complexity through mathematical rigor.
+                        </p>
+</div>
+<div class="md:col-span-6 flex justify-end gap-4">
+<div class="border border-black p-6 bg-white hard-shadow w-48">
+<span class="font-label-caps block mb-2 opacity-60">LATENCY</span>
+<span class="font-headline-md text-3xl">14ms</span>
+</div>
+<div class="border border-black p-6 bg-lime-400 hard-shadow w-48">
+<span class="font-label-caps block mb-2 text-black">THROUGHPUT</span>
+<span class="font-headline-md text-3xl text-black">HIGH</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Decorative Image Element -->
+<div class="absolute right-0 bottom-0 w-1/3 h-2/3 border-l border-t border-black hidden lg:block overflow-hidden">
+<img class="w-full h-full object-cover grayscale opacity-20 hover:grayscale-0 hover:opacity-100 transition-all duration-700" data-alt="Technical blueprint grid with glowing neon green digital lines and abstract geometric architecture in a high-contrast monochromatic style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsE30V6liTj3ncAh9sewW0R-qG0L2ZGHPOqN7GJy1Bg65rokXvHKDWoYy0q7uWLgEski3NP5E8TarIwPMH7DoEuNZBl_NYK7JgsQVGVM6OQGnguCmgKlez8-8nhP4aYRjyTpi5ng05q8DAWh5ckziUeQ504L-8A-SQt1WECzoNybshO63Y6n3KeP9dplfujM5s2ioaj6RP4Pcrbp-_xwPBDF9Xt43-1AnMcQgPbPpgHk1zs0WYp3fXmWjYswKg7MJwWVgK5jj4zBMb"/>
+</div>
+</section>
+<!-- Stats Grid (Global Footprint) -->
+<section class="border-b border-black">
+<div class="grid grid-cols-1 md:grid-cols-3">
+<div class="p-12 border-b md:border-b-0 md:border-r border-black hover:bg-lime-400 transition-none group">
+<span class="font-label-caps block mb-4 group-hover:text-black">GEOGRAPHIC REACH</span>
+<h2 class="font-headline-lg text-6xl group-hover:text-black">4+</h2>
+<p class="font-label-caps mt-2 group-hover:text-black">SOVEREIGN TERRITORIES</p>
+</div>
+<div class="p-12 border-b md:border-b-0 md:border-r border-black hover:bg-lime-400 transition-none group">
+<span class="font-label-caps block mb-4 group-hover:text-black">MONTHLY LOAD</span>
+<h2 class="font-headline-lg text-6xl group-hover:text-black">12M+</h2>
+<p class="font-label-caps mt-2 group-hover:text-black">REQUESTS PROCESSED</p>
+</div>
+<div class="p-12 hover:bg-lime-400 transition-none group">
+<span class="font-label-caps block mb-4 group-hover:text-black">RELIABILITY</span>
+<h2 class="font-headline-lg text-6xl group-hover:text-black">99.99%</h2>
+<p class="font-label-caps mt-2 group-hover:text-black">UPTIME SLA</p>
+</div>
+</div>
+</section>
+<!-- Services Section (Bento Grid) -->
+<section class="p-8 md:p-16 max-w-container-max mx-auto">
+<div class="mb-16">
+<span class="font-label-caps text-primary border-b-2 border-primary pb-1">01 / CAPABILITIES</span>
+<h3 class="font-headline-md mt-6 uppercase tracking-tighter text-5xl">CORE SPECIALIZATIONS</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-0 border border-black">
+<!-- Service 1 -->
+<div class="md:col-span-8 p-12 border-b md:border-b-0 md:border-r border-black relative group overflow-hidden">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-4xl mb-6" data-icon="terminal">terminal</span>
+<h4 class="font-headline-md text-4xl mb-6">COMPUTATIONAL WORKLOADS</h4>
+<p class="font-body-lg max-w-xl mb-8">Architecting high-performance computing environments optimized for speed, security, and deterministic outcomes. We specialize in low-latency infrastructure for real-time processing.</p>
+<div class="flex gap-2 flex-wrap">
+<span class="border border-black px-3 py-1 font-label-caps text-[10px]">RUST</span>
+<span class="border border-black px-3 py-1 font-label-caps text-[10px]">KUBERNETES</span>
+<span class="border border-black px-3 py-1 font-label-caps text-[10px]">WASM</span>
+</div>
+</div>
+<div class="absolute right-0 top-0 w-1/3 h-full bg-zinc-100 -z-0 opacity-0 group-hover:opacity-100 transition-opacity">
+<img class="w-full h-full object-cover" data-alt="Macro photography of complex circuit board patterns with metallic highlights and neon green traces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6i7z4iKJJDtQBuY7u9HXNUrPP40Q-59O_BzRWw0C7tIJ-AcoZaU8JkNvVFkWsYlmGCYVqW7-GErFVrV-3Bpdq0P2RSyE-I2yKuc718Ocw682VNp2plp84KAdygmSXE5QyVpHtDMw5oq5OoKfuCPrp9dnlzVyOVFBoRl75-bsIL0g2BVHrdxnq6Chcfo69heXkEA3U_Xdo0C9qR1Ph6cblAkd2O9pF4c5TYWvTpkeBiMoaESoomAud42KMc9Fr6oqbw4is7mxXnLws"/>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="md:col-span-4 p-12 bg-black text-white flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-lime-400 text-4xl mb-6" data-icon="database">database</span>
+<h4 class="font-headline-md text-3xl mb-4">DATA INTENSITY</h4>
+<p class="font-mono-data opacity-70">Managing multi-petabyte datasets with absolute integrity. SQL/NoSQL hybrid schemas designed for extreme scale and rapid retrieval.</p>
+</div>
+<div class="mt-12 border-t border-zinc-800 pt-6">
+<a class="font-label-caps text-lime-400 flex items-center gap-2 hover:gap-4 transition-all" href="#">
+                            SYSTEM SPECS <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="md:col-span-4 p-12 border-t border-black">
+<span class="material-symbols-outlined text-4xl mb-6" data-icon="architecture">architecture</span>
+<h4 class="font-headline-md text-3xl mb-4">DOMAIN EXPERTISE</h4>
+<p class="font-body-md">Specialized engineering teams dedicated to finance, energy, and aerospace. Domain-specific logic embedded at the compiler level.</p>
+</div>
+<!-- Graphic Fill -->
+<div class="md:col-span-8 p-0 border-t border-l border-black overflow-hidden relative min-h-[300px]">
+<img class="w-full h-full object-cover grayscale contrast-125" data-alt="Abstract 3D technical visualization of complex mathematical nodes and strings in high contrast black and white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAghMxr7vr-Fcd891iUWreH8NcMrim6Dzq0rk7Wl8HLWzS-C3hVFrOI25haX40_rEV6X9pRyQN9anqUbEAfBO8uyLlJe0ZYh9ygtqTy2K0Zl7FXOhNEDw8OJvB_P68RvT2cl_I9v4-SjTBFrK0L7H3eA-K4_vyl1PfCNn9G9wO3HUYDSoQg1zW9HYkeorIYeC_JD1Oi2Gck01Jx-0UNjNV91JyeQEp9wivn4kVgd_n2BdFGJT5Egea08GI06vJR_qXCYp2VkeAx9guM"/>
+<div class="absolute inset-0 bg-lime-400/10 mix-blend-multiply"></div>
+</div>
+</div>
+</section>
+<!-- Technical Footer CTA -->
+<section class="border-t border-b border-black">
+<div class="grid grid-cols-1 md:grid-cols-2">
+<div class="p-12 md:p-24 border-b md:border-b-0 md:border-r border-black">
+<h2 class="font-headline-lg text-5xl mb-8 uppercase leading-tight">READY TO DEPLOY<br/>STABILITY?</h2>
+<p class="font-body-lg mb-12 max-w-md">Our engineering audits provide a clear baseline for your current technical debt and infrastructure potential.</p>
+<div class="flex gap-4">
+<button class="bg-black text-white px-8 py-4 font-label-caps hard-shadow hover:bg-lime-400 hover:text-black transition-none uppercase tracking-widest border border-black">
+                            REQUEST AUDIT
+                        </button>
+</div>
+</div>
+<div class="p-12 md:p-24 bg-zinc-50 flex items-center justify-center relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="h-full w-full custom-grid-pattern"></div>
+</div>
+<div class="relative z-10 text-center">
+<div class="text-[8rem] font-black leading-none opacity-5 tracking-tighter absolute -top-10 left-1/2 -translate-x-1/2 whitespace-nowrap">EUCLIDITY</div>
+<p class="font-label-caps text-zinc-400 mb-4">PRIMARY HEADQUARTERS</p>
+<p class="font-headline-sm uppercase">MADRID // SPAIN</p>
+<p class="font-mono-data mt-2">CALLE DE LA PRECISIÓN, 0.1</p>
+<div class="mt-12 w-full h-48 border border-black bg-white overflow-hidden">
+<img class="w-full h-full object-cover grayscale" data-alt="Minimalist architectural detail of a concrete and glass engineering building with sharp angles and clean lines" data-location="Madrid" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvsTL0C8a-yGkY39-Or8aWHylLHUARMhu9Ck0RLxZB9efBAEqOLak8BqZBqbSfReMhfKIbCEkhx_q6JBJHo74L7xbOEn4uTUDFTTCkVR3SU38OQdY-OFtuShjCY8bQm_YUP_h3Zt-_ohpFRD8L0k7N-gb7eusWDNIwKYpJezEdj4dsJRzZjl6PfPOFLOTQrxb5mIhBzuJuqmXU3dNuwZidg3HEYr5IoskPkieDtvG337imM9xSnYlcm6YUr9JfjPh1euts0wDTYvDj"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-zinc-950 border-t border-black dark:border-zinc-800 flex flex-col md:flex-row justify-between items-center w-full px-8 py-12 gap-8">
+<div class="flex flex-col gap-2">
+<div class="text-lg font-black text-black dark:text-white font-headline-md uppercase">EUCLIDITY SL</div>
+<p class="font-['Space_Grotesk'] text-xs font-bold uppercase tracking-tight text-zinc-400 dark:text-zinc-600">
+                © 2024 EUCLIDITY SL. ENGINEERED PRECISION.
+            </p>
+</div>
+<div class="flex gap-8">
+<a class="font-['Space_Grotesk'] text-xs font-bold uppercase tracking-tight text-zinc-400 dark:text-zinc-600 hover:underline decoration-lime-400 decoration-2" href="#">PRIVACY</a>
+<a class="font-['Space_Grotesk'] text-xs font-bold uppercase tracking-tight text-zinc-400 dark:text-zinc-600 hover:underline decoration-lime-400 decoration-2" href="#">TERMS</a>
+<a class="font-['Space_Grotesk'] text-xs font-bold uppercase tracking-tight text-lime-400" href="#">SYSTEM STATUS</a>
+</div>
+<div class="flex gap-4">
+<div class="w-8 h-8 border border-black flex items-center justify-center hover:bg-lime-400 transition-none cursor-pointer">
+<span class="material-symbols-outlined text-sm" data-icon="share">share</span>
+</div>
+<div class="w-8 h-8 border border-black flex items-center justify-center hover:bg-lime-400 transition-none cursor-pointer">
+<span class="material-symbols-outlined text-sm" data-icon="terminal">terminal</span>
+</div>
+</div>
+</footer>
+</body></html>

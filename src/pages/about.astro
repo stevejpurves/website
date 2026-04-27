@@ -2,160 +2,167 @@
 import Layout from '../layouts/Layout.astro';
 import Icon from '../components/Icon.astro';
 
-const portrait = 'https://lh3.googleusercontent.com/aida-public/AB6AXuAd_3Xq3lvs6SoFN93eyd_Y4LOBDPnxzJMdnP9AafIjtnyF1A3h49s7TvDyb8_l1NuTAjFJCPF9xj_sNAr6Ypy1o3TZnx_uHcDA4o6EiELrDGlbfqk8U8PX46E2uiyU04vzq_25PVE-spw8cE5pmybeKI5_vmQfdTXCylXUSqrXcdyEKM6SuJ6stXv_Xd0wGum0YDpgh8IzK3f45x16YwPPnKbeebSw1sm3z8D1_wsNG8yCb50itKpG3_cl6O1FmDGWgmoFNWimqTTj';
+const portrait = '/images/portrait-steve.webp';
 ---
 
 <Layout title="About — Euclidity SL" active="about">
-  <!-- Hero -->
-  <section class="px-16 py-xl max-w-[1440px] mx-auto">
-    <div class="grid grid-cols-12 gap-gutter items-end mb-24">
-      <div class="col-span-12 md:col-span-8">
-        <span class="font-label-caps text-label-caps text-primary uppercase mb-4 block">Institutional Identity</span>
-        <h1 class="font-h1 text-h1 text-on-background mb-8 uppercase">EUCLIDITY SL.</h1>
-        <p class="font-body-lg text-body-lg text-secondary max-w-2xl">
-          A specialized engineering collective dedicated to the synthesis of rigorous scientific inquiry and scalable systems architecture. We exist at the intersection of mathematical precision and industrial utility.
-        </p>
-      </div>
-      <div class="col-span-12 md:col-span-4 text-right">
-        <span class="font-mono-data text-mono-data text-outline">REG_ID: B76611763</span>
+  <!-- Hero / Leader Profile -->
+  <section class="border-b border-on-background grid grid-cols-1 md:grid-cols-12 min-h-[716px]">
+    <div class="md:col-span-7 p-8 md:p-16 md:border-r border-on-background flex flex-col justify-center">
+      <span class="font-label-caps text-label-caps text-primary mb-4 block">LEAD CONSULTANT</span>
+      <h1 class="font-headline-lg text-headline-lg text-on-background uppercase mb-8 leading-[0.9]">
+        STEVE PURVES.<br />
+        <span class="text-secondary">FOCUSSED ON DELIVERY.</span>
+      </h1>
+      <p class="font-body-lg text-body-lg text-on-surface max-w-xl mb-12">
+        Euclidity SL is a boutique technical consultancy specializing in the intersection of high-performance computing, scientific visualization, and system architecture. We translate complex domain requirements into robust, production-ready systems.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <div class="border border-on-background p-4 flex flex-col">
+          <span class="font-label-caps text-label-caps text-secondary mb-1">FOUNDED</span>
+          <span class="font-headline-sm text-headline-sm text-on-background">2013</span>
+        </div>
+        <div class="border border-on-background p-4 flex flex-col">
+          <span class="font-label-caps text-label-caps text-secondary mb-1">HQ</span>
+          <span class="font-headline-sm text-headline-sm text-on-background">TENERIFE / ES</span>
+        </div>
+        <div class="border border-on-background p-4 flex flex-col">
+          <span class="font-label-caps text-label-caps text-secondary mb-1">CORE STACK</span>
+          <span class="font-headline-sm text-headline-sm text-on-background">NODE / C++ / PYTHON</span>
+        </div>
       </div>
     </div>
-
-    <!-- Mission grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-0 brutalist-border">
-      <div class="p-lg border-b md:border-b-0 md:border-r border-on-background">
-        <Icon name="terminal" size={36} class="text-primary mb-4" />
-        <h3 class="font-h3 text-h3 mb-4 uppercase">Hard Problems</h3>
-        <p class="font-body-md text-body-md text-secondary">We specialize in computationally expensive challenges that standard architectures cannot resolve. Our focus is on algorithmic efficiency and structural integrity.</p>
-      </div>
-      <div class="p-lg border-b md:border-b-0 md:border-r border-on-background">
-        <Icon name="science" size={36} class="text-primary mb-4" />
-        <h3 class="font-h3 text-h3 mb-4 uppercase">Scientific Domains</h3>
-        <p class="font-body-md text-body-md text-secondary">Bridging the gap between pure research and commercial application. We translate complex scientific models into high-performance software environments.</p>
-      </div>
-      <div class="p-lg">
-        <Icon name="hub" size={36} class="text-primary mb-4" />
-        <h3 class="font-h3 text-h3 mb-4 uppercase">System Bridging</h3>
-        <p class="font-body-md text-body-md text-secondary">Designing the connective tissue for disparate technology stacks. We ensure seamless data flow across heterogenous industrial infrastructures.</p>
+    <div class="md:col-span-5 relative bg-surface-container-low flex items-end justify-center overflow-hidden border-t md:border-t-0 border-on-background">
+      <img
+        class="w-full h-full object-cover grayscale contrast-125 mix-blend-multiply"
+        src={portrait}
+        alt="Studio portrait of Steve Purves"
+      />
+      <div class="absolute bottom-8 right-8 bg-background border border-on-background p-6 hard-shadow max-w-[260px]">
+        <p class="font-mono-data text-mono-data leading-relaxed">
+          "WE LOVE WORKING ON COMPLEX PROBLEMS, AND APPLICATIONS THAT DELIVER SCIENTIFIC AND COMPUTATIONAL CAPABILITIES."
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Leadership -->
-  <section class="bg-surface-container-low border-t border-b border-on-background py-xl">
-    <div class="px-16 max-w-[1440px] mx-auto">
-      <div class="grid grid-cols-12 gap-gutter items-center">
-        <div class="col-span-12 md:col-span-5 mb-12 md:mb-0">
-          <div class="brutalist-border p-2 bg-surface-container-lowest">
-            <img
-              alt="Steve Purves portrait"
-              class="w-full grayscale contrast-125 brightness-90"
-              src={portrait}
-            />
-          </div>
+  <!-- Mission grid -->
+  <section class="p-8 md:p-16 border-b border-on-background">
+    <div class="mb-16">
+      <span class="font-label-caps text-label-caps text-primary mb-2 block">OUR MISSION</span>
+      <h2 class="font-headline-md text-headline-md text-on-background uppercase">CORE DOMAINS OF OPERATION</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-0 border-t border-l border-on-background">
+      <div class="border-r border-b border-on-background p-10 hover:bg-primary-container group transition-none">
+        <div class="mb-8">
+          <Icon name="terminal" size={36} />
         </div>
-        <div class="col-span-12 md:col-span-7 md:pl-12">
-          <span class="font-label-caps text-label-caps text-primary uppercase mb-2 block">Technical Direction</span>
-          <h2 class="font-h2 text-h2 mb-6 uppercase">STEVE PURVES</h2>
-          <div class="w-16 h-1 bg-primary mb-8"></div>
-          <p class="font-body-lg text-body-lg mb-8 leading-relaxed">
-            "Engineering is not merely the act of building; it is the discipline of eliminating ambiguity. At Euclidity, our methodology is rooted in the uncompromising pursuit of technical clarity."
-          </p>
-          <div class="grid grid-cols-2 gap-8">
-            <div>
-              <span class="font-mono-data text-mono-data block text-outline mb-1">POSITION</span>
-              <span class="font-label-caps text-label-caps">CHIEF SYSTEMS ARCHITECT</span>
-            </div>
-            <div>
-              <span class="font-mono-data text-mono-data block text-outline mb-1">EXPERTISE</span>
-              <span class="font-label-caps text-label-caps">COMPUTATIONAL PHYSICS</span>
-            </div>
-          </div>
+        <h3 class="font-headline-sm text-headline-sm text-on-background uppercase mb-4">HARD PROBLEMS</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-primary-container">
+          Specializing in translating compex scientific and engineering problem sets into working, usable software where off-the-shelf solutions fail. We tackle project management, development deployment and delivery or scalable, software solutions.
+        </p>
+        <div class="mt-8 pt-8 border-t border-on-background/10 group-hover:border-on-primary-container/30">
+          <span class="font-label-caps text-label-caps text-secondary group-hover:text-on-primary-container">REF: ALG-001</span>
+        </div>
+      </div>
+      <div class="border-r border-b border-on-background p-10 hover:bg-primary-container group transition-none">
+        <div class="mb-8">
+          <Icon name="science" size={36} />
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-on-background uppercase mb-4">SCIENTIFIC DOMAINS</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-primary-container">
+          Bridging the gap between research and commercial software. Experts in buiding software in difference domains built in earth sciences, geology, geophysics, finance, biotech, medical instrumentation, large scale data visualisation and more.
+        </p>
+        <div class="mt-8 pt-8 border-t border-on-background/10 group-hover:border-on-primary-container/30">
+          <span class="font-label-caps text-label-caps text-secondary group-hover:text-on-primary-container">REF: SCI-402</span>
+        </div>
+      </div>
+      <div class="border-r border-b border-on-background p-10 hover:bg-primary-container group transition-none">
+        <div class="mb-8">
+          <Icon name="hub" size={36} />
+        </div>
+        <h3 class="font-headline-sm text-headline-sm text-on-background uppercase mb-4">SYSTEM BRIDGING</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-primary-container">
+          Designing the connective tissue between legacy infrastructure and modern cloud-native architectures. High-reliability API design and data pipeline engineering.
+        </p>
+        <div class="mt-8 pt-8 border-t border-on-background/10 group-hover:border-on-primary-container/30">
+          <span class="font-label-caps text-label-caps text-secondary group-hover:text-on-primary-container">REF: SYS-990</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="px-16 py-xl max-w-[1440px] mx-auto scroll-mt-24">
-    <div class="grid grid-cols-12 gap-gutter">
-      <div class="col-span-12 md:col-span-4">
-        <h2 class="font-h2 text-h2 mb-8 uppercase">Initiate Consultation</h2>
-        <p class="font-body-md text-body-md text-secondary mb-12">
-          For project inquiries involving high-complexity systems or scientific data processing, please submit a formal request.
+  <!-- Consultation form -->
+  <section id="contact" class="grid grid-cols-1 md:grid-cols-2 border-b border-on-background scroll-mt-20">
+    <div class="p-8 md:p-16 border-b md:border-b-0 md:border-r border-on-background bg-on-background text-background flex flex-col justify-between">
+      <div>
+        <span class="font-label-caps text-label-caps text-primary-fixed mb-4 block">READY TO ENGAGE?</span>
+        <h2 class="font-headline-lg text-headline-lg uppercase mb-8 leading-none">
+          GET IN<br />TOUCH
+        </h2>
+        <p class="font-body-lg text-body-lg text-secondary-fixed-dim max-w-md">
+          Describe your technical bottleneck. Tell us about your timeline.
         </p>
-        <div class="space-y-4">
-          <div class="flex items-center gap-4">
-            <Icon name="mail" class="text-primary" />
-            <a href="mailto:ops@euclidity.com" class="font-mono-data text-mono-data hover:text-primary transition-colors">ops@euclidity.com</a>
-          </div>
-          <div class="flex items-center gap-4">
-            <Icon name="location_on" class="text-primary" />
-            <span class="font-mono-data text-mono-data">Madrid, Technological Zone</span>
-          </div>
+      </div>
+      <div class="mt-12">
+        <div class="flex items-center gap-4 py-4 border-t border-secondary">
+          <Icon name="verified" class="text-primary-fixed" />
+          <span class="font-mono-data text-mono-data">INITIAL CONTACT VIA VIDEO CALL</span>
+        </div>
+        <div class="flex items-center gap-4 py-4 border-t border-secondary">
+          <Icon name="speed" class="text-primary-fixed" />
+          <span class="font-mono-data text-mono-data">RESPONSE TIME 1-2 BUSINESS DAYS</span>
         </div>
       </div>
+    </div>
 
-      <div class="col-span-12 md:col-span-8">
-        <form
-          class="space-y-8 brutalist-border p-lg bg-surface-container-lowest"
-          action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID"
-          method="POST"
+    <div class="p-8 md:p-16 bg-background">
+      <form
+        class="space-y-12"
+        action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID"
+        method="POST"
+      >
+        <div class="space-y-2">
+          <label for="name" class="font-label-caps text-label-caps text-secondary block">01. FULL NAME / ENTITY</label>
+          <input
+            id="name"
+            name="name"
+            required
+            class="w-full border-b border-on-background bg-transparent p-0 py-2 focus:ring-0 focus:border-primary focus:border-b-2 outline-none font-body-md text-body-md placeholder:text-surface-container-highest"
+            placeholder="REQUIRED"
+            type="text"
+          />
+        </div>
+        <div class="space-y-2">
+          <label for="email" class="font-label-caps text-label-caps text-secondary block">02. COMMUNICATION ENDPOINT (EMAIL)</label>
+          <input
+            id="email"
+            name="email"
+            required
+            class="w-full border-b border-on-background bg-transparent p-0 py-2 focus:ring-0 focus:border-primary focus:border-b-2 outline-none font-body-md text-body-md placeholder:text-surface-container-highest"
+            placeholder="REQUIRED"
+            type="email"
+          />
+        </div>
+        <div class="space-y-2">
+          <label for="message" class="font-label-caps text-label-caps text-secondary block">03. TECHNICAL SCOPE / PROBLEM DESCRIPTION</label>
+          <textarea
+            id="message"
+            name="message"
+            required
+            class="w-full border-b border-on-background bg-transparent p-0 py-2 focus:ring-0 focus:border-primary focus:border-b-2 outline-none font-body-md text-body-md placeholder:text-surface-container-highest resize-none"
+            placeholder="DESCRIBE THE SYSTEM PARAMETERS"
+            rows="4"
+          ></textarea>
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-on-background text-background py-6 font-headline-sm text-headline-sm uppercase tracking-widest border border-on-background hover:bg-primary-container hover:text-on-primary-container transition-none flex items-center justify-center gap-4"
         >
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="flex flex-col gap-2">
-              <label for="name" class="font-label-caps text-label-caps uppercase">Full Name</label>
-              <input
-                id="name"
-                name="name"
-                required
-                class="brutalist-border px-4 py-3 bg-surface-container-lowest focus:outline-none focus:border-primary focus:border-2 transition-all"
-                placeholder="SURNAME, INITIALS"
-                type="text"
-              />
-            </div>
-            <div class="flex flex-col gap-2">
-              <label for="organization" class="font-label-caps text-label-caps uppercase">Organization</label>
-              <input
-                id="organization"
-                name="organization"
-                class="brutalist-border px-4 py-3 bg-surface-container-lowest focus:outline-none focus:border-primary focus:border-2 transition-all"
-                placeholder="ENTITY NAME"
-                type="text"
-              />
-            </div>
-          </div>
-          <div class="flex flex-col gap-2">
-            <label for="email" class="font-label-caps text-label-caps uppercase">Email</label>
-            <input
-              id="email"
-              name="email"
-              required
-              class="brutalist-border px-4 py-3 bg-surface-container-lowest focus:outline-none focus:border-primary focus:border-2 transition-all"
-              placeholder="NAME@DOMAIN.COM"
-              type="email"
-            />
-          </div>
-          <div class="flex flex-col gap-2">
-            <label for="message" class="font-label-caps text-label-caps uppercase">Technical Requirements</label>
-            <textarea
-              id="message"
-              name="message"
-              required
-              class="brutalist-border px-4 py-3 bg-surface-container-lowest focus:outline-none focus:border-primary focus:border-2 transition-all"
-              placeholder="DESCRIBE THE CORE TECHNICAL CHALLENGE..."
-              rows="4"
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            class="w-full bg-primary text-on-primary font-bold text-lg py-4 brutalist-border hover:bg-on-background transition-all flex items-center justify-center gap-4"
-          >
-            SUBMIT_CONSULTATION_REQUEST
-            <Icon name="arrow_forward" />
-          </button>
-        </form>
-      </div>
+          SEND MEETING REQUEST
+          <Icon name="send" />
+        </button>
+      </form>
     </div>
   </section>
 </Layout>

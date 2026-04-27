@@ -1,6 +1,4 @@
 ---
-import Logo from './Logo.astro';
-
 interface Props {
   active?: 'services' | 'projects' | 'about' | null;
 }
@@ -14,22 +12,21 @@ const links: { href: string; label: string; key: NonNullable<Props['active']> }[
 ];
 ---
 
-<header class="bg-surface-container-lowest border-b border-on-background fixed top-0 left-0 right-0 z-50">
-  <nav class="flex justify-between items-center w-full px-16 h-20 max-w-[1440px] mx-auto">
-    <a href="/" class="flex items-center gap-3 text-on-background">
-      <Logo size={36} class="block" />
-      <span class="text-2xl font-bold tracking-tighter font-h1 uppercase">Euclidity&nbsp;SL</span>
+<header class="bg-background border-b border-on-background fixed top-0 left-0 right-0 z-50 h-16">
+  <nav class="flex justify-between items-center w-full h-full px-8 max-w-[1440px] mx-auto">
+    <a href="/" class="text-2xl font-bold tracking-tighter text-on-background uppercase font-headline-md">
+      Euclidity SL
     </a>
 
-    <div class="hidden md:flex gap-12 items-center">
+    <div class="hidden md:flex items-center gap-8">
       {links.map((link) => (
         <a
           href={link.href}
           class:list={[
-            'font-h1 font-bold uppercase tracking-tight text-body-md transition-colors duration-75',
+            "font-body-md text-sm font-medium uppercase tracking-widest px-2 py-1 transition-none",
             active === link.key
-              ? 'text-primary border-b-2 border-primary pb-1'
-              : 'text-on-background hover:text-primary',
+              ? "text-on-background border-b-2 border-primary-container pb-1"
+              : "text-secondary hover:bg-primary-container hover:text-on-primary-container",
           ]}
         >
           {link.label}
@@ -39,9 +36,9 @@ const links: { href: string; label: string; key: NonNullable<Props['active']> }[
 
     <a
       href="/about#contact"
-      class="bg-primary text-on-primary px-6 py-3 font-label-caps text-label-caps uppercase tracking-widest border border-on-background hover:bg-on-background transition-colors"
+      class="bg-on-background text-background px-6 py-2 font-body-md text-sm font-bold uppercase tracking-widest border border-on-background hover:bg-primary-container hover:text-on-primary-container transition-none"
     >
-      GET_IN_TOUCH
+      GET IN TOUCH
     </a>
   </nav>
 </header>

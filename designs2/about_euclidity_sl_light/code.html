@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#e7bf99",
+                    "on-primary": "#ffffff",
+                    "on-secondary-container": "#646464",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#775839",
+                    "surface-bright": "#fbf8ff",
+                    "on-background": "#1a1b22",
+                    "surface": "#fbf8ff",
+                    "on-secondary-fixed": "#1b1b1b",
+                    "on-tertiary-fixed": "#2c1701",
+                    "surface-container-low": "#f4f2fd",
+                    "on-primary-fixed": "#002203",
+                    "error": "#ba1a1a",
+                    "on-surface": "#1a1b22",
+                    "tertiary-fixed": "#ffdcbd",
+                    "primary-fixed-dim": "#00e639",
+                    "surface-container-high": "#e8e7f1",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#474747",
+                    "on-tertiary-container": "#7a5b3c",
+                    "surface-variant": "#e3e1ec",
+                    "primary-fixed": "#72ff70",
+                    "inverse-on-surface": "#f1effa",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#5d4124",
+                    "surface-tint": "#006e16",
+                    "on-primary-fixed-variant": "#00530e",
+                    "secondary-fixed-dim": "#c6c6c6",
+                    "tertiary-container": "#ffd5ae",
+                    "inverse-primary": "#00e639",
+                    "on-error": "#ffffff",
+                    "outline": "#6b7c65",
+                    "primary-container": "#00ff41",
+                    "secondary-fixed": "#e2e2e2",
+                    "on-secondary": "#ffffff",
+                    "surface-container": "#eeedf7",
+                    "secondary": "#5e5e5e",
+                    "surface-dim": "#dad9e3",
+                    "on-tertiary": "#ffffff",
+                    "background": "#fbf8ff",
+                    "surface-container-highest": "#e3e1ec",
+                    "secondary-container": "#e2e2e2",
+                    "on-primary-container": "#007117",
+                    "primary": "#006e16",
+                    "outline-variant": "#b9ccb2",
+                    "on-surface-variant": "#3b4b37",
+                    "inverse-surface": "#2f3038"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin": "48px",
+                    "container-max": "1440px",
+                    "unit": "4px"
+            },
+            "fontFamily": {
+                    "body-md": ["Space Grotesk"],
+                    "mono-data": ["Space Grotesk"],
+                    "headline-md": ["Space Grotesk"],
+                    "headline-lg": ["Space Grotesk"],
+                    "headline-sm": ["Space Grotesk"],
+                    "body-lg": ["Space Grotesk"],
+                    "label-caps": ["Space Grotesk"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body { font-family: 'Space Grotesk', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hard-shadow {
+            box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+        }
+        .hard-shadow-hover:hover {
+            box-shadow: 6px 6px 0px 0px rgba(0,0,0,1);
+            transform: translate(-2px, -2px);
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-white text-on-background min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full h-16 bg-white z-50 border-b border-black flex justify-between items-center px-8">
+<div class="text-2xl font-black tracking-tighter text-black uppercase">EUCLIDITY SL</div>
+<div class="hidden md:flex items-center gap-8 h-full">
+<a class="font-body-md text-sm font-medium uppercase tracking-widest text-zinc-500 hover:bg-primary-container hover:text-black transition-none px-2 py-1" href="#">SERVICES</a>
+<a class="font-body-md text-sm font-medium uppercase tracking-widest text-zinc-500 hover:bg-primary-container hover:text-black transition-none px-2 py-1" href="#">PROJECTS</a>
+<a class="font-body-md text-sm font-medium uppercase tracking-widest text-black border-b-2 border-primary-container pb-1" href="#">ABOUT</a>
+</div>
+<button class="bg-black text-white px-6 py-2 font-body-md text-sm font-bold uppercase tracking-widest border border-black hover:bg-primary-container hover:text-black transition-none">
+            GET IN TOUCH
+        </button>
+</nav>
+<main class="flex-grow pt-16">
+<!-- Hero Section / Leader Profile -->
+<section class="border-b border-black grid grid-cols-1 md:grid-cols-12 min-h-[716px]">
+<div class="md:col-span-7 p-8 md:p-16 border-r border-black flex flex-col justify-center">
+<span class="font-label-caps text-primary mb-4 block">EXECUTIVE LEADERSHIP</span>
+<h1 class="font-headline-lg text-black uppercase mb-8 leading-[0.9]">STEVE PURVES.<br/><span class="text-zinc-400">ENGINEERING THE UNKNOWN.</span></h1>
+<p class="font-body-lg text-on-surface max-w-xl mb-12">
+                    Euclidity SL is a boutique technical consultancy specializing in the intersection of high-performance computing, scientific visualization, and system architecture. We translate complex mathematical abstractions into robust, production-ready systems.
+                </p>
+<div class="flex gap-4">
+<div class="border border-black p-4 flex flex-col">
+<span class="font-label-caps text-zinc-500 mb-1">FOUNDED</span>
+<span class="font-headline-sm text-black">2024</span>
+</div>
+<div class="border border-black p-4 flex flex-col">
+<span class="font-label-caps text-zinc-500 mb-1">HQ</span>
+<span class="font-headline-sm text-black">SL</span>
+</div>
+<div class="border border-black p-4 flex flex-col">
+<span class="font-label-caps text-zinc-500 mb-1">CORE</span>
+<span class="font-headline-sm text-black">RUST / C++ / PYTHON</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-5 relative bg-zinc-100 flex items-end justify-center overflow-hidden">
+<img class="w-full h-full object-cover grayscale contrast-125 mix-blend-multiply" data-alt="Professional studio portrait of Steve Purves, clean technical lighting, high-contrast monochrome style against a stark white background, authoritative engineering look" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW28rg4h9lJ5fgM_iFBJpCLhQAAul9dFM-mTqilA6JcHWr6_GV8ZQ0YNKg8twDX7ZFpSfaKztLXztr1fCsFyJHWR_2lftHPRcZbA5FDER9ndh4KuOtmle_YiNwzseW31a1_RVMaHjyEfW3MS5ln6Y7-b21idN289zLGEJ9Hm8myRZfM33T3xkU4JFYk7YGpUCtfo9iouhuQY-5z0-C0Qo6G9s-VyoZqOoM_epilvDtnp9UeAACuOaofrTqxhL_ntRNMmpDi6JHoH_N"/>
+<div class="absolute bottom-8 right-8 bg-white border border-black p-6 hard-shadow">
+<p class="font-mono-data text-sm leading-relaxed max-w-[200px]">
+                        "WE DON'T BUILD INTERFACES. WE BUILD INSTRUMENTS FOR PRECISION."
+                    </p>
+</div>
+</div>
+</section>
+<!-- Mission Bento Grid -->
+<section class="p-8 md:p-16 border-b border-black">
+<div class="mb-16">
+<span class="font-label-caps text-primary mb-2 block">OUR MISSION</span>
+<h2 class="font-headline-md text-black uppercase">CORE DOMAINS OF OPERATION</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0 border-t border-l border-black">
+<!-- Hard Problems -->
+<div class="border-r border-b border-black p-10 hover:bg-primary-container group transition-none">
+<div class="mb-8">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 0;">terminal</span>
+</div>
+<h3 class="font-headline-sm text-black uppercase mb-4">HARD PROBLEMS</h3>
+<p class="font-body-md text-on-surface-variant">
+                        Specializing in algorithmic optimization where off-the-shelf solutions fail. We tackle memory management, concurrency, and low-latency requirements for high-stakes environments.
+                    </p>
+<div class="mt-8 pt-8 border-t border-black/10 group-hover:border-black/30">
+<span class="font-label-caps text-zinc-400 group-hover:text-black">REF: ALG-001</span>
+</div>
+</div>
+<!-- Scientific Domains -->
+<div class="border-r border-b border-black p-10 hover:bg-primary-container group transition-none">
+<div class="mb-8">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 0;">science</span>
+</div>
+<h3 class="font-headline-sm text-black uppercase mb-4">SCIENTIFIC DOMAINS</h3>
+<p class="font-body-md text-on-surface-variant">
+                        Bridging the gap between academic research and commercial software. Experts in geospatial data, geological modeling, and large-scale data visualization.
+                    </p>
+<div class="mt-8 pt-8 border-t border-black/10 group-hover:border-black/30">
+<span class="font-label-caps text-zinc-400 group-hover:text-black">REF: SCI-402</span>
+</div>
+</div>
+<!-- System Bridging -->
+<div class="border-r border-b border-black p-10 hover:bg-primary-container group transition-none">
+<div class="mb-8">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 0;">hub</span>
+</div>
+<h3 class="font-headline-sm text-black uppercase mb-4">SYSTEM BRIDGING</h3>
+<p class="font-body-md text-on-surface-variant">
+                        Designing the connective tissue between legacy infrastructure and modern cloud-native architectures. High-reliability API design and data pipeline engineering.
+                    </p>
+<div class="mt-8 pt-8 border-t border-black/10 group-hover:border-black/30">
+<span class="font-label-caps text-zinc-400 group-hover:text-black">REF: SYS-990</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Consultation Form -->
+<section class="grid grid-cols-1 md:grid-cols-2 border-b border-black">
+<div class="p-8 md:p-16 border-r border-black bg-zinc-950 text-white flex flex-col justify-between">
+<div>
+<span class="font-label-caps text-primary-fixed mb-4 block">READY TO ENGAGE?</span>
+<h2 class="font-headline-lg uppercase mb-8 leading-none">INITIATE<br/>CONSULTATION</h2>
+<p class="font-body-lg text-zinc-400 max-w-md">
+                        Describe your technical bottleneck. Our team reviews all inquiries within 24 standard business hours.
+                    </p>
+</div>
+<div class="mt-12">
+<div class="flex items-center gap-4 py-4 border-t border-zinc-800">
+<span class="material-symbols-outlined text-primary-fixed">verified</span>
+<span class="font-mono-data text-sm">SECURITY ENCRYPTED CHANNEL</span>
+</div>
+<div class="flex items-center gap-4 py-4 border-t border-zinc-800">
+<span class="material-symbols-outlined text-primary-fixed">speed</span>
+<span class="font-mono-data text-sm">DIRECT ENGINEER ACCESS</span>
+</div>
+</div>
+</div>
+<div class="p-8 md:p-16 bg-white">
+<form class="space-y-12">
+<div class="space-y-2">
+<label class="font-label-caps text-zinc-500 block">01. FULL NAME / ENTITY</label>
+<input class="w-full border-b border-black p-0 py-2 focus:ring-0 focus:border-primary focus:border-b-2 outline-none font-body-md placeholder:text-zinc-300" placeholder="REQUIRED" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-zinc-500 block">02. COMMUNICATION ENDPOINT (EMAIL)</label>
+<input class="w-full border-b border-black p-0 py-2 focus:ring-0 focus:border-primary focus:border-b-2 outline-none font-body-md placeholder:text-zinc-300" placeholder="REQUIRED" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-zinc-500 block">03. TECHNICAL SCOPE / PROBLEM DESCRIPTION</label>
+<textarea class="w-full border-b border-black p-0 py-2 focus:ring-0 focus:border-primary focus:border-b-2 outline-none font-body-md placeholder:text-zinc-300 resize-none" placeholder="DESCRIBE THE SYSTEM PARAMETERS" rows="4"></textarea>
+</div>
+<button class="w-full bg-black text-white py-6 font-headline-sm uppercase tracking-widest border border-black hover:bg-primary-container hover:text-black transition-none flex items-center justify-center gap-4" type="submit">
+                        SEND DATA PACKET
+                        <span class="material-symbols-outlined">send</span>
+</button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white border-t border-black px-8 py-12 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col gap-2 items-center md:items-start">
+<span class="font-headline-sm font-black text-black uppercase">EUCLIDITY SL</span>
+<span class="font-label-caps text-zinc-400">© 2024 EUCLIDITY SL. ENGINEERED PRECISION.</span>
+</div>
+<div class="flex gap-12">
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-black">CONNECT</span>
+<a class="font-label-caps text-zinc-400 hover:underline decoration-primary-container decoration-2" href="#">LINKEDIN</a>
+<a class="font-label-caps text-zinc-400 hover:underline decoration-primary-container decoration-2" href="#">GITHUB</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-black">LEGAL</span>
+<a class="font-label-caps text-zinc-400 hover:underline decoration-primary-container decoration-2" href="#">PRIVACY</a>
+<a class="font-label-caps text-zinc-400 hover:underline decoration-primary-container decoration-2" href="#">TERMS</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-black">STATUS</span>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 bg-primary-container rounded-full"></div>
+<span class="font-label-caps text-primary">SYSTEMS NOMINAL</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

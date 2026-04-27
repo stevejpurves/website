@@ -2,152 +2,152 @@
 import Layout from '../layouts/Layout.astro';
 import Icon from '../components/Icon.astro';
 
-const methodologyImage = 'https://lh3.googleusercontent.com/aida-public/AB6AXuD02xIB9PGPDfZoxwQfrBgBnNHph5P0hA4m8ppRr95BYI9wvxvoMv3q_uMOptQGZZWn0fUTWyqrDq3neLDE6zogHZAQHw2Ut94rMZiIjobp4eWxhz-Y2ZUFCRX6QIEfJ_eHaZrdrrh-coafRwsj_0L8ngkZpMmT1krB4eJvSjWiId1M-agfHqn0RLPUTuh4SU-bXsQmS5WPOZPdmhT7ldVKDC2-rATQH0WLOdk760mfiaFPE5yoSoKmXq_z0l-7MwJ0lS3UmqQpUOON';
-const rdImage = 'https://lh3.googleusercontent.com/aida-public/AB6AXuBvePEaFMEu1Ub7nAjwtVvyLL6_F8mvfyyVwDXQKc3ucna_QaFS5cILUYd6z7WoRy6qo0L-cknKR9gP70jnZ8oKir5TglIxt_pBYxl7qAmR5nxoFJBL-C4iEP6IxgSTGkms9Sl_agUlB0E1JFw1Xxtn_iholrn7uhBpw4A0LsNm0BR7eOue05_QpiTm6L4k9I0qkNT65v3HiOGsVi_80YruX1hK9HwxMW748omEZUrAtgZir6hymBF5XDkpV0ghLDuvHoM_u9dIdBCi';
+const serverImage = '/images/services-server-hardware.png';
 ---
 
 <Layout title="Services — Euclidity SL" active="services">
-  <div class="max-w-[1440px] mx-auto px-16 py-xl">
+  <div class="max-w-[1440px] mx-auto min-h-screen">
     <!-- Hero -->
-    <section class="mb-xl">
-      <div class="flex flex-col gap-sm max-w-4xl">
-        <span class="font-label-caps text-label-caps text-primary uppercase tracking-[0.2em] mb-xs">CORE CAPABILITIES</span>
-        <h1 class="font-h1 text-h1 text-on-background mb-md uppercase leading-none">HIGH-PRECISION<br />ENGINEERING.</h1>
-        <p class="font-body-lg text-body-lg text-secondary max-w-2xl">
-          Euclidity SL delivers clinical execution for high-stakes technical environments. We bridge the gap between abstract scientific research and production-grade reliability.
+    <section class="px-8 pt-24 pb-16 border-b border-on-background grid grid-cols-1 md:grid-cols-12 gap-gutter">
+      <div class="md:col-span-8">
+        <span class="font-label-caps text-label-caps text-primary mb-4 block">01 / CAPABILITIES</span>
+        <h1 class="font-headline-lg text-headline-lg uppercase leading-none mb-8">
+          Engineering<br />Experience for<br />Complex Systems.
+        </h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+          We architect and build high-performance software for environments where failure is not an option. From low-level systems to fractional leadership, we provide the technical muscle to scale high-stakes infrastructure.
         </p>
       </div>
+      <div class="md:col-span-4 flex items-end justify-end">
+        <div class="w-full aspect-square border border-on-background p-4 flex flex-col justify-between">
+          <span class="font-mono-data text-mono-data uppercase">[ SERVICES: AVAILABLE ]</span>
+          <div class="font-headline-md text-headline-md leading-none">TECHNICAL<br />MASTERY.</div>
+        </div>
+      </div>
     </section>
 
-    <!-- Services bento -->
-    <div class="grid grid-cols-12 gap-gutter">
-      <div class="col-span-12 md:col-span-8 brutalist-border bg-surface-container-lowest p-lg flex flex-col justify-between min-h-[400px]">
-        <div>
-          <div class="flex justify-between items-start mb-lg">
-            <Icon name="terminal" size={36} class="text-primary" />
-            <div class="flex gap-2">
-              <span class="px-2 py-1 bg-surface-container-high font-label-caps text-[10px]">TS</span>
-              <span class="px-2 py-1 bg-surface-container-high font-label-caps text-[10px]">RUST</span>
-              <span class="px-2 py-1 bg-surface-container-high font-label-caps text-[10px]">C++</span>
-            </div>
-          </div>
-          <h2 class="font-h3 text-h3 mb-md uppercase">Full-Stack Engineering</h2>
-          <p class="font-body-md text-body-md text-secondary max-w-xl">
-            Building deterministic, high-throughput systems. Our stack is chosen for safety, performance, and long-term maintainability. We specialize in TypeScript, Node.js, Rust, Python, and C++ for mission-critical applications.
-          </p>
+    <!-- Services Bento -->
+    <section class="grid grid-cols-1 md:grid-cols-12 border-b border-on-background">
+      <!-- Full-Stack Engineering -->
+      <div class="md:col-span-6 border-b md:border-b-0 md:border-r border-on-background p-8 group hover:bg-primary-container transition-none">
+        <div class="flex justify-between items-start mb-12">
+          <Icon name="terminal" size={36} />
+          <span class="font-mono-data text-mono-data opacity-50">02.1</span>
         </div>
-        <div class="mt-lg pt-md border-t border-surface-dim flex justify-between items-center">
-          <span class="font-mono-data text-xs uppercase tracking-widest text-primary">STATUS: PRODUCTION_READY</span>
-          <Icon name="arrow_forward" class="text-primary" />
+        <h3 class="font-headline-sm text-headline-sm uppercase mb-4">Full-Stack Engineering</h3>
+        <p class="font-body-md text-body-md mb-8 text-on-surface-variant group-hover:text-on-primary-container">Production-ready implementation across the entire stack. We favor strongly-typed systems and deterministic performance.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 border border-on-background text-xs font-bold uppercase">Typescript</span>
+          <span class="px-3 py-1 border border-on-background text-xs font-bold uppercase">Node</span>
+          <span class="px-3 py-1 border border-on-background text-xs font-bold uppercase">Rust</span>
+          <span class="px-3 py-1 border border-on-background text-xs font-bold uppercase">Python</span>
+          <span class="px-3 py-1 border border-on-background text-xs font-bold uppercase">C++</span>
         </div>
       </div>
-
-      <div class="col-span-12 md:col-span-4 brutalist-border bg-on-background text-surface-container-lowest p-lg flex flex-col">
-        <Icon name="science" size={36} class="text-primary-fixed-dim mb-lg" />
-        <h2 class="font-h3 text-h3 mb-md uppercase text-surface-container-lowest">R&amp;D Leadership</h2>
-        <ul class="font-mono-data text-mono-data space-y-md text-surface-container-low mt-sm">
-          <li class="flex items-center gap-sm">
-            <span class="w-1.5 h-1.5 bg-primary-container inline-block"></span> Machine Learning Research
-          </li>
-          <li class="flex items-center gap-sm">
-            <span class="w-1.5 h-1.5 bg-primary-container inline-block"></span> Algorithm Development
-          </li>
-          <li class="flex items-center gap-sm">
-            <span class="w-1.5 h-1.5 bg-primary-container inline-block"></span> Computer Vision Systems
-          </li>
-          <li class="flex items-center gap-sm">
-            <span class="w-1.5 h-1.5 bg-primary-container inline-block"></span> Signal Processing
-          </li>
-        </ul>
-        <div class="mt-auto pt-xl">
-          <img
-            alt="Abstract 3D network visualization of neural nodes and connections"
-            class="w-full grayscale h-32 object-cover"
-            src={rdImage}
-          />
+      <!-- R&D Leadership -->
+      <div class="md:col-span-6 p-8 group hover:bg-primary-container transition-none">
+        <div class="flex justify-between items-start mb-12">
+          <Icon name="science" size={36} />
+          <span class="font-mono-data text-mono-data opacity-50">02.2</span>
+        </div>
+        <h3 class="font-headline-sm text-headline-sm uppercase mb-4">R&amp;D Leadership</h3>
+        <p class="font-body-md text-body-md mb-8 text-on-surface-variant group-hover:text-on-primary-container">Bridging the gap between academic research and commercial software. We specialize in algorithmic optimization and visual intelligence.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 border border-on-background text-xs font-bold uppercase">Machine Learning</span>
+          <span class="px-3 py-1 border border-on-background text-xs font-bold uppercase">Algorithm Dev</span>
+          <span class="px-3 py-1 border border-on-background text-xs font-bold uppercase">Computer Vision</span>
         </div>
       </div>
-
-      <div class="col-span-12 md:col-span-5 brutalist-border bg-surface-container-lowest p-lg relative overflow-hidden">
-        <div class="z-10 relative">
-          <Icon name="cloud_done" size={36} class="text-primary mb-lg" />
-          <h2 class="font-h3 text-h3 mb-md uppercase">Cloud Native Architectures</h2>
-          <p class="font-body-md text-body-md text-secondary mb-lg">
-            Scalable infrastructure for intensive workloads. AWS, Azure, GCP, JupyterHub deployments, and high-performance Docker containerization.
-          </p>
+      <!-- Fractional CTO -->
+      <div class="md:col-span-6 border-t md:border-r border-on-background p-8 group hover:bg-primary-container transition-none">
+        <div class="flex justify-between items-start mb-12">
+          <Icon name="architecture" size={36} />
+          <span class="font-mono-data text-mono-data opacity-50">02.3</span>
         </div>
-        <div class="flex gap-xs flex-wrap">
-          <span class="border border-outline-variant px-3 py-1 font-label-caps text-label-caps">KUBERNETES</span>
-          <span class="border border-outline-variant px-3 py-1 font-label-caps text-label-caps">TERRAFORM</span>
-          <span class="border border-outline-variant px-3 py-1 font-label-caps text-label-caps">SERVERLESS</span>
+        <h3 class="font-headline-sm text-headline-sm uppercase mb-4">Fractional CTO</h3>
+        <p class="font-body-md text-body-md mb-8 text-on-surface-variant group-hover:text-on-primary-container">Strategic technical governance for growing ventures. Roadmap validation, technical hiring, and architecture audit without the full-time overhead.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 border border-on-background text-xs font-bold uppercase">Governance</span>
+          <span class="px-3 py-1 border border-on-background text-xs font-bold uppercase">Audit</span>
+          <span class="px-3 py-1 border border-on-background text-xs font-bold uppercase">Mentorship</span>
         </div>
       </div>
-
-      <div class="col-span-12 md:col-span-7 brutalist-border bg-primary text-on-primary p-lg flex items-center justify-between">
-        <div class="max-w-md">
-          <h2 class="font-h3 text-h3 mb-md uppercase text-on-primary">Fractional CTO &amp; Team Augmentation</h2>
-          <p class="font-body-md text-body-md opacity-90">
-            Strategic technical leadership for scaling startups and enterprise divisions. We integrate with your team to instill engineering rigor and accelerate roadmap delivery.
-          </p>
+      <!-- Cloud Native -->
+      <div class="md:col-span-6 border-t border-on-background p-8 group hover:bg-primary-container transition-none">
+        <div class="flex justify-between items-start mb-12">
+          <Icon name="cloud_done" size={36} />
+          <span class="font-mono-data text-mono-data opacity-50">02.4</span>
         </div>
-        <div class="hidden lg:block text-8xl font-bold opacity-20 select-none">CTO</div>
+        <h3 class="font-headline-sm text-headline-sm uppercase mb-4">Cloud Native Architectures</h3>
+        <p class="font-body-md text-body-md mb-8 text-on-surface-variant group-hover:text-on-primary-container">Resilient systems designed for hyperscale. We focus on latency reduction, zero-trust security, and horizontal scalability.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 border border-on-background text-xs font-bold uppercase">Performance</span>
+          <span class="px-3 py-1 border border-on-background text-xs font-bold uppercase">Resilience</span>
+          <span class="px-3 py-1 border border-on-background text-xs font-bold uppercase">Kubernetes</span>
+        </div>
       </div>
-    </div>
+    </section>
 
     <!-- Methodology -->
-    <section class="mt-xl py-xl brutalist-border bg-surface-container-lowest">
-      <div class="px-lg flex flex-col md:flex-row gap-xl items-center">
-        <div class="md:w-1/2">
-          <div class="h-[400px] w-full bg-surface-container relative">
-            <img
-              alt="Extreme close-up of high-precision mechanical gears and micro-components"
-              class="w-full h-full object-cover grayscale opacity-50"
-              src={methodologyImage}
-            />
-            <div class="absolute inset-0 border-[24px] border-surface-container-lowest"></div>
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary-container text-on-primary-container p-6 brutalist-border">
-              <span class="font-h2 text-h2 leading-none">0.001%</span>
-              <p class="font-label-caps text-label-caps mt-2">ERROR TOLERANCE</p>
-            </div>
-          </div>
+    <section class="border-b border-on-background grid grid-cols-1 md:grid-cols-12">
+      <div class="md:col-span-4 border-b md:border-b-0 md:border-r border-on-background p-8 bg-surface-container-low">
+        <span class="font-label-caps text-label-caps block mb-12">03 / METHODOLOGY</span>
+        <h2 class="font-headline-md text-headline-md uppercase leading-tight mb-8">
+          Solving Hard<br />Integration<br />Problems.
+        </h2>
+        <div class="border-t border-on-background pt-8">
+          <p class="font-body-md text-body-md text-on-surface-variant">We don't do 'easy'. We specialize in the friction points between legacy systems and modern tech stacks.</p>
         </div>
-        <div class="md:w-1/2">
-          <span class="font-label-caps text-label-caps text-primary uppercase mb-xs block">THE METHODOLOGY</span>
-          <h2 class="font-h2 text-h2 mb-lg uppercase tracking-tighter">SOLVING HARD INTEGRATION PROBLEMS</h2>
-          <div class="space-y-lg">
-            <div class="flex gap-md">
-              <span class="font-h3 text-h3 text-primary opacity-30">01</span>
-              <div>
-                <h4 class="font-bold uppercase mb-xs">Scientific Domain Onboarding</h4>
-                <p class="text-secondary font-body-md text-body-md">We don't just write code; we learn your domain. Whether it's biotech, quantitative finance, or industrial IoT, our engineers speak your language.</p>
-              </div>
+      </div>
+      <div class="md:col-span-8 p-0">
+        <div class="grid grid-cols-1 md:grid-cols-2">
+          <div class="p-8 border-b border-on-background">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="bg-on-background text-background w-8 h-8 flex items-center justify-center font-mono-data text-xs">01</span>
+              <h4 class="font-label-caps text-label-caps uppercase">Domain Mastery</h4>
             </div>
-            <div class="flex gap-md">
-              <span class="font-h3 text-h3 text-primary opacity-30">02</span>
-              <div>
-                <h4 class="font-bold uppercase mb-xs">Rigorous Stress Testing</h4>
-                <p class="text-secondary font-body-md text-body-md">Our systems are battle-tested against edge cases, network latency, and data corruption scenarios before they ever reach a production environment.</p>
-              </div>
+            <p class="font-body-md text-body-md text-on-surface-variant">Deep immersion into the technical landscape. We learn your constraints before writing a single line of code.</p>
+          </div>
+          <div class="p-8 border-b border-on-background md:border-l">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="bg-on-background text-background w-8 h-8 flex items-center justify-center font-mono-data text-xs">02</span>
+              <h4 class="font-label-caps text-label-caps uppercase">First Principles</h4>
             </div>
-            <div class="flex gap-md">
-              <span class="font-h3 text-h3 text-primary opacity-30">03</span>
-              <div>
-                <h4 class="font-bold uppercase mb-xs">Deterministic Deployment</h4>
-                <p class="text-secondary font-body-md text-body-md">Using Infrastructure-as-Code and immutable build artifacts to ensure that what was tested is exactly what was shipped.</p>
-              </div>
+            <p class="font-body-md text-body-md text-on-surface-variant">Deconstructing problems into their fundamental components to avoid bloated abstraction layers.</p>
+          </div>
+          <div class="p-8 border-b md:border-b-0 border-on-background">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="bg-on-background text-background w-8 h-8 flex items-center justify-center font-mono-data text-xs">03</span>
+              <h4 class="font-label-caps text-label-caps uppercase">Rigorous Validation</h4>
             </div>
+            <p class="font-body-md text-body-md text-on-surface-variant">Continuous automated testing and performance profiling integrated into the core development loop.</p>
+          </div>
+          <div class="p-8 md:border-l border-on-background">
+            <div class="flex items-center gap-4 mb-4">
+              <span class="bg-on-background text-background w-8 h-8 flex items-center justify-center font-mono-data text-xs">04</span>
+              <h4 class="font-label-caps text-label-caps uppercase">Legacy Coexistence</h4>
+            </div>
+            <p class="font-body-md text-body-md text-on-surface-variant">Building bridges, not islands. We ensure new systems integrate seamlessly with existing infrastructure.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="mt-xl py-xl text-center">
-      <h2 class="font-h2 text-h2 uppercase mb-lg">READY TO SCALE?</h2>
-      <div class="flex justify-center gap-md">
-        <a href="/about#contact" class="bg-on-background text-surface-container-lowest px-12 py-5 font-label-caps text-label-caps brutalist-border hover:bg-primary-container hover:text-on-primary-container hover:border-primary-container transition-all">
-          START_CONSULTATION
-        </a>
+
+
+    <!-- Visual Anchor -->
+    <section class="w-full border-b border-on-background h-[400px] relative overflow-hidden">
+      <img
+        alt="Close-up of high-performance server hardware"
+        class="w-full h-full object-cover grayscale brightness-50 contrast-125"
+        src={serverImage}
+      />
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div class="border-2 border-primary-container p-12 text-center bg-on-background/40 backdrop-blur-sm">
+          <div class="text-primary-container leading-tight uppercase font-bold text-xl">
+            DELIVERING SOFTWARE REMOTELY <br />SINCE 2013
+          </div>
+        </div3
       </div>
     </section>
   </div>

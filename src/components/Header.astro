@@ -1,4 +1,6 @@
 ---
+import { Menu, X } from '@lucide/astro';
+
 interface Props {
   active?: 'services' | 'projects' | 'about' | null;
 }
@@ -36,9 +38,103 @@ const links: { href: string; label: string; key: NonNullable<Props['active']> }[
 
     <a
       href="/about#contact"
-      class="bg-on-background text-background px-6 py-2 font-body-md text-sm font-bold uppercase tracking-widest border border-on-background hover:bg-primary-container hover:text-on-primary-container transition-none"
+      class="hidden md:inline-block bg-on-background text-background px-6 py-2 font-body-md text-sm font-bold uppercase tracking-widest border border-on-background hover:bg-primary-container hover:text-on-primary-container transition-none"
     >
       GET IN TOUCH
     </a>
+
+    <button
+      type="button"
+      id="mobile-nav-toggle"
+      class="md:hidden inline-flex items-center justify-center w-10 h-10 -mr-2 text-on-background"
+      aria-label="Open menu"
+      aria-controls="mobile-nav"
+      aria-expanded="false"
+    >
+      <Menu size={28} strokeWidth={2} aria-hidden="true" />
+    </button>
   </nav>
 </header>
+
+<div
+  id="mobile-nav"
+  class="fixed inset-0 z-[60] md:hidden hidden"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Site menu"
+>
+  <div id="mobile-nav-backdrop" class="absolute inset-0 bg-on-background/40"></div>
+
+  <div
+    id="mobile-nav-panel"
+    class="absolute top-0 right-0 h-full w-full max-w-sm bg-background border-l border-on-background flex flex-col"
+  >
+    <div class="flex justify-between items-center h-16 px-8 border-b border-on-background">
+      <span class="text-2xl font-bold tracking-tighter text-on-background uppercase font-headline-md">
+        Euclidity SL
+      </span>
+      <button
+        type="button"
+        id="mobile-nav-close"
+        class="inline-flex items-center justify-center w-10 h-10 -mr-2 text-on-background"
+        aria-label="Close menu"
+      >
+        <X size={28} strokeWidth={2} aria-hidden="true" />
+      </button>
+    </div>
+
+    <div class="flex flex-col px-8 py-6 gap-1">
+      {links.map((link) => (
+        <a
+          href={link.href}
+          class:list={[
+            "font-body-md text-base font-medium uppercase tracking-widest py-3 border-b border-on-background/10 transition-none",
+            active === link.key
+              ? "text-on-background"
+              : "text-secondary hover:text-on-background",
+          ]}
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+
+    <div class="mt-auto px-8 pb-8">
+      <a
+        href="/about#contact"
+        class="block text-center bg-on-background text-background px-6 py-3 font-body-md text-sm font-bold uppercase tracking-widest border border-on-background hover:bg-primary-container hover:text-on-primary-container transition-none"
+      >
+        GET IN TOUCH
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const toggle = document.getElementById('mobile-nav-toggle');
+  const closeBtn = document.getElementById('mobile-nav-close');
+  const backdrop = document.getElementById('mobile-nav-backdrop');
+  const menu = document.getElementById('mobile-nav');
+
+  if (toggle && closeBtn && backdrop && menu) {
+    const open = () => {
+      menu.classList.remove('hidden');
+      toggle.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    };
+
+    const close = () => {
+      menu.classList.add('hidden');
+      toggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    };
+
+    toggle.addEventListener('click', open);
+    closeBtn.addEventListener('click', close);
+    backdrop.addEventListener('click', close);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !menu.classList.contains('hidden')) close();
+    });
+  }
+</script>

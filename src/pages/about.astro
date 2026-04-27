@@ -6,6 +6,43 @@ const portrait = '/images/portrait-steve.webp';
 ---
 
 <Layout title="About — Euclidity SL" active="about">
+  <!-- Confirmation banner — shown only when redirected back from Formspree with ?sent=1 -->
+  <div
+    id="contact-confirmation"
+    role="status"
+    aria-live="polite"
+    class="hidden border-b border-on-background bg-primary-container px-8 py-4"
+  >
+    <div class="max-w-[1440px] mx-auto flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <Icon name="verified" class="text-on-primary-container" />
+        <span class="font-label-caps text-label-caps text-on-primary-container uppercase">
+          Message received — we'll be in touch within 1-2 business days.
+        </span>
+      </div>
+      <button
+        id="contact-confirmation-close"
+        type="button"
+        aria-label="Dismiss"
+        class="font-mono-data text-mono-data text-on-primary-container hover:opacity-70 transition-none px-2"
+      >
+        ✕
+      </button>
+    </div>
+  </div>
+
+  <script is:inline>
+    (() => {
+      if (!new URLSearchParams(window.location.search).has('sent')) return;
+      const banner = document.getElementById('contact-confirmation');
+      if (!banner) return;
+      banner.classList.remove('hidden');
+      document
+        .getElementById('contact-confirmation-close')
+        ?.addEventListener('click', () => banner.classList.add('hidden'));
+    })();
+  </script>
+
   <!-- Hero / Leader Profile -->
   <section class="border-b border-on-background grid grid-cols-1 md:grid-cols-12 min-h-[716px]">
     <div class="md:col-span-7 p-8 md:p-16 md:border-r border-on-background flex flex-col justify-center">
@@ -119,7 +156,7 @@ const portrait = '/images/portrait-steve.webp';
     <div class="p-8 md:p-16 bg-background">
       <form
         class="space-y-12"
-        action="https://formspree.io/f/REPLACE_WITH_YOUR_FORM_ID"
+        action="https://formspree.io/f/xgorbpwl"
         method="POST"
       >
         <div class="space-y-2">
@@ -155,6 +192,9 @@ const portrait = '/images/portrait-steve.webp';
             rows="4"
           ></textarea>
         </div>
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hidden" />
+        <input type="hidden" name="_subject" value="New consultation request — euclidity.com" />
+        <input type="hidden" name="_next" value="https://euclidity.com/about?sent=1" />        
         <button
           type="submit"
           class="w-full bg-on-background text-background py-6 font-headline-sm text-headline-sm uppercase tracking-widest border border-on-background hover:bg-primary-container hover:text-on-primary-container transition-none flex items-center justify-center gap-4"
